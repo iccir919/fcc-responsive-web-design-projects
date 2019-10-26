@@ -14,8 +14,11 @@
             <p id="description">
                 Please take this survey to describe your bicycle needs. Everyone can participate regardless of where, how or why they ride. 
             </p>
-            <form id="survey-form">
-            <form id="survey-form">
+            <form 
+                id="survey-form"
+                action="https://formspree.io/xrgzkqzl"
+                method="POST"
+            >
                 <label id="name-label" for="name">Name:</label>
                 <input required id="name" name="name" placeholder="First name is fine" type="text">
 
@@ -82,8 +85,7 @@
                 </select>
 
                 <p>Anything else you would like to share?</p>
-                <textarea rows="4" cols="50">
-                </textarea>
+                <textarea rows="4" cols="50"></textarea>
                 <br>
                 <button id="submit" type="submit">submit</button>
             </form>
