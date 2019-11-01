@@ -65,7 +65,7 @@ a:link {
 
 .intro {
     font-size: 1.25em; /* 20px/16px */
-    line-height: 1.6;  
+    line-height: 1.9;  
 }
 
 .primary-content,
@@ -137,6 +137,8 @@ a:link {
     max-width: 100%;
     display: block;
     height: auto;
+    margin: auto;
+    border-radius: 25px;
 }
 
 .arrow {
@@ -157,7 +159,7 @@ a:link {
 
 .bio {
   float: right;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 /* Float Clearfix ------------------ */
