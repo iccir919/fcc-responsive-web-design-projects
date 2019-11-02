@@ -45,6 +45,10 @@ a:link {
 
 /* Main Styles --------------------- */
 
+#main {
+  min-width: 100%;
+}
+
 .main-header {
     padding-top: 170px;
     height: 850px;
