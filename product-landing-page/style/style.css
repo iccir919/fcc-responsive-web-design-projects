@@ -1,0 +1,59 @@
+/* ================================= 
+  Base Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.main-nav li {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#header-img {
+  width: 50%;
+}
+
+.main-nav a {
+  padding: 10px 15px;
+  display: block;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-bottom: 30px;
+}
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .container {
+    width: 80%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  #header-img,
+  .main-nav li {
+    display: inline-block;
+  }
+}
