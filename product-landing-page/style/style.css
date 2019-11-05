@@ -6,6 +6,22 @@
   box-sizing: border-box;
 }
 
+
+#about p {
+  line-height: 1.4;
+}
+
+
+.bio-feat-pic {
+  float: left;
+  width: 300px;
+  margin-top: 5px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: solid 1px #d9e4ea;
+}
+
 /* ================================= 
   Base Layout Styles
 ==================================== */
@@ -16,10 +32,15 @@
   text-align: center;
   margin-top: 6px;
   margin-bottom: 6px;
+  float: left;
 }
 
 #header-img {
-  width: 50%;
+  width: 36%;
+}
+
+.main-nav {
+  display: inline-block;
 }
 
 .main-nav a {
@@ -29,16 +50,17 @@
 
 /* ---- Layout Containers ---- */
 
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .main-header {
   text-align: center;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   margin-bottom: 30px;
-}
-
-.container {
-  padding-left: 1em;
-  padding-right: 1em;
+  overflow: hidden;
 }
 
 /* ================================= 
@@ -52,8 +74,22 @@
     margin: 0 auto;
   }
 
-  #header-img,
-  .main-nav li {
-    display: inline-block;
-  }
+  .main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		margin-left: 12px;
+	}
+
+	.logo {
+		float: left;
+	}
+
+	.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
 }
