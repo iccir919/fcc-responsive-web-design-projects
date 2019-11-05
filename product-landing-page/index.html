@@ -3,30 +3,29 @@
   <head>
     <title>Charlie's Barbershop</title>
     <link rel="stylesheet" href="style/normalize.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/base.css" />
+    <link rel="stylesheet" href="style/flexbox.css" />
   </head>
   <body>
     <div class="wrap">
       <header class="main-header" id="header">
-        <div class="container clearfix">
-          <img
-            class="logo"
-            src="https://charliesbarbershop.org/logo2.jpg"
-            alt="Charlie's Barbershop Logo"
-            id="header-img"
-          />
-          <nav id="nav-bar">
-            <ul class="main-nav">
-              <li><a href="#about" class="nav-link">About</a></li>
-              <li><a href="#prices" class="nav-link">Prices</a></li>
-              <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+        <img
+          class="logo"
+          src="https://charliesbarbershop.org/logo2.jpg"
+          alt="Charlie's Barbershop Logo"
+          id="header-img"
+        />
+        <nav id="nav-bar">
+          <ul class="main-nav">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#prices" class="nav-link">Prices</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
       </header>
 
       <main>
-        <section class="container clearfix" id="about">
+        <section class="container" id="about">
           <img class="bio-feat-pic" src="img/charlie_outside.jpg">
           <p>
             Charlie Phan was only 14 when he left his home in Antarctica and set
@@ -103,21 +102,23 @@
 
         <section class="container" id="contact">
           <div class="primary col">
-            <h3>Location</h3>
-            <address>
-              534 San Ramon Valley Blvd <br />
-              Danville, CA 94526
-              <h3>Phone</h3>
-              <a href="tel:925-820-8821">(925) 820-8821</a>
-            </address>
-          </div>
-          <div class="secondary col">
-            <h3>Hours</h3>
-            <p><strong>Tues - Fri:</strong> 9am - 6pm</p>
-            <p><strong>Sat:</strong> 9am - 5pm</p>
-            <p><strong>Sun:</strong> Closed</p>
-          </div>
-          <div class="tertiary">
+            <div class="row">
+              <h3>Location</h3>
+              <address>
+                534 San Ramon Valley Blvd <br />
+                Danville, CA 94526
+                <h3>Phone</h3>
+                <a href="tel:925-820-8821">(925) 820-8821</a>
+              </address>
+            </div>
+            <div class="secondary col">
+              <h3>Hours</h3>
+              <p><strong>Tues - Fri:</strong> 9am - 6pm</p>
+              <p><strong>Sat:</strong> 9am - 5pm</p>
+              <p><strong>Sun:</strong> Closed</p>
+            </div>
+          </div>  
+          <div>
             <h3>Email</h3>
             <a href="mailto:charlie@charliebarbershop.org"
               >charlie@charliebarbershop.org</a
@@ -144,7 +145,7 @@
       </main>
     </div>
 
-    <footer>
+    <footer class="main-footer">
       <p>&copy;2019 Charlie's Barbershop</p>
     </footer>
 
