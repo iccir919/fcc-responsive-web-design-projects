@@ -25,8 +25,8 @@
       </header>
 
       <main>
-        <section class="container" id="about">
-          <img class="bio-feat-pic" src="img/charlie_outside.jpg">
+        <section class="container clearfix" id="about">
+          <img class="bio-img img-border" src="img/charlie_outside.jpg">
           <p>
             Charlie Phan was only 14 when he left his home in Antarctica and set
             out for America. He was a smart kid but traveling the seas is always
@@ -54,84 +54,88 @@
           </p>
         </section>
 
-        <section class="container" id="prices">
-          <h2>Price List</h2>
-          <table>
-            <tr>
-              <td>Haircut</td>
-              <td>$22.00</td>
-            </tr>
-            <tr>
-              <td>Skin Fade</td>
-              <td>$25.00</td>
-            </tr>
-            <tr>
-              <td>Flattop</td>
-              <td>$25.00</td>
-            </tr>
-            <tr>
-              <td>Skin Fade Flattop</td>
-              <td>$28.00</td>
-            </tr>
-            <tr>
-              <td>Beard Trim</td>
-              <td>$14.00</td>
-            </tr>
-            <tr>
-              <td>Goatee</td>
-              <td>$8.00</td>
-            </tr>
-            <tr>
-              <td>Mustache Trim</td>
-              <td>$6.00</td>
-            </tr>
-            <tr>
-              <td>Shampoo</td>
-              <td>$12.00</td>
-            </tr>
-            <tr>
-              <td>Shampoo, Cut, &amp; Dry</td>
-              <td>$35.00</td>
-            </tr>
-            <tr>
-              <td>Hairstyle Razor Cut</td>
-              <td>$30.00</td>
-            </tr>
-          </table>
-        </section>
-
-        <section class="container" id="contact">
-          <div class="primary col">
-            <div class="row">
-              <h3>Location</h3>
-              <address>
-                534 San Ramon Valley Blvd <br />
-                Danville, CA 94526
-                <h3>Phone</h3>
-                <a href="tel:925-820-8821">(925) 820-8821</a>
-              </address>
-            </div>
-            <div class="secondary col">
-              <h3>Hours</h3>
-              <p><strong>Tues - Fri:</strong> 9am - 6pm</p>
-              <p><strong>Sat:</strong> 9am - 5pm</p>
-              <p><strong>Sun:</strong> Closed</p>
-            </div>
-          </div>  
-          <div>
-            <h3>Email</h3>
-            <a href="mailto:charlie@charliebarbershop.org"
-              >charlie@charliebarbershop.org</a
-            >
-            <form action="https://www.freecodecamp.com/email-submit" id="form">
-              <input type="email" id="email" placeholder="Your email address">
-              <textarea placeholder="Your message to Charlies"></textarea>
-              <input type="submit" id="submit">
-            </form>
+        <section class="container row" id="prices">
+          <div class="primary">
+            <h2>Price List</h2>
+            <table>
+              <tr>
+                <td>Haircut</td>
+                <td>$22.00</td>
+              </tr>
+              <tr>
+                <td>Skin Fade</td>
+                <td>$25.00</td>
+              </tr>
+              <tr>
+                <td>Flattop</td>
+                <td>$25.00</td>
+              </tr>
+              <tr>
+                <td>Skin Fade Flattop</td>
+                <td>$28.00</td>
+              </tr>
+              <tr>
+                <td>Beard Trim</td>
+                <td>$14.00</td>
+              </tr>
+              <tr>
+                <td>Goatee</td>
+                <td>$8.00</td>
+              </tr>
+              <tr>
+                <td>Mustache Trim</td>
+                <td>$6.00</td>
+              </tr>
+              <tr>
+                <td>Shampoo</td>
+                <td>$12.00</td>
+              </tr>
+              <tr>
+                <td>Shampoo, Cut, &amp; Dry</td>
+                <td>$35.00</td>
+              </tr>
+              <tr>
+                <td>Hairstyle Razor Cut</td>
+                <td>$30.00</td>
+              </tr>
+            </table>
+          </div>
+          <div class="secondary">
+              <img class="img-border" src="img/inside.jpg" alt="Inside of Charlie's Barbershop">
           </div>
         </section>
 
-        <aside>
+        <section class="container" id="contact">
+          <div class="row">
+            <div class="col">
+                <h3>Phone</h3>
+                <a href="tel:925-820-8821">(925) 820 - 8821</a>
+  
+                <h3>Location</h3>
+                <address>
+                  534 San Ramon Valley Blvd <br />
+                  Danville, CA 94526
+                </address>
+
+              </div>
+              <div class="col">
+                <h3>Hours</h3>
+                <p><strong>Tues - Fri:</strong> 9am - 6pm</p>
+                <p><strong>Sat:</strong> 9am - 5pm</p>
+                <p><strong>Sun:</strong> Closed</p>
+              </div>
+            <div class="contact-form col">
+                <h3>Send Charlie an Email</h3>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                  <input type="email" name="email" placeholder="Email Address" id="email" />
+                  <textarea name="message-field" placeholder="Type your Message"></textarea>
+                  <input type="submit" value="Send" id="submit"/>
+                </form>
+            </div> 
+          </div> 
+        </section>
+
+        <aside class="container row">
           <iframe
             id="video"
             width="560"

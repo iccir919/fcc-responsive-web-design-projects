@@ -7,7 +7,7 @@
 }
 
 body {
-	line-height: 1.6;
+	line-height: 1.8;
 	margin: 0;
 }
 
@@ -22,7 +22,7 @@ ul {
 }
 
 p {
-	font-size: .95em;
+	font-size: 1em;
 	margin-bottom: 1.8em;
 }
 
@@ -32,8 +32,7 @@ a {
 	color: #093a58;
 }
 
-h2,
-h3 {
+h2 {
 	margin-top: 0;
 }
 
@@ -50,11 +49,21 @@ img {
 	max-width: 250px;
 }
 
+table {
+	width: 100%;
+}
+
+td:nth-child(1) {  
+	width: 75%;
+}
+
 /* ================================= 
   Base Layout Styles
 ==================================== */
 
 /* ---- Navigation ---- */
+
+
 
 .main-nav {
 	margin-top: 5px;
@@ -67,15 +76,20 @@ img {
 }
 .main-nav a {
 	font-size: .95em;
-	color: #3acec2;
+	color: #093a58;
 	text-transform: uppercase;
 }
 
 .main-nav a:hover {
-	color: #093a58;
+	color: #031b2b;
 }
 
 /* ---- Layout Containers ---- */
+
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+}
 
 .main-header {
 	padding-top: .5em;
@@ -97,7 +111,74 @@ img {
 	margin-top: 30px;
 }
 
+.secondary {
+	text-align: center;
+}
+
+#contact .row {
+	justify-content: space-between;
+}
+
 /* ---- Page Elements ---- */
+
+
+.secondary img {
+	margin: 10px auto;
+}
+
+.img-border {
+	padding: 10px;
+	border: solid 1px #d9e4ea;
+}
+
+.bio-img {
+	float: left;
+	max-width: 300px;
+	margin: 5px 15px 10px 0;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+}
+
+.contact-form textarea:focus,
+.contact-form input[type="email"]:focus
+{
+	box-shadow: 0 0 5px rgb(26, 2, 116);
+	padding: 3%;
+	border: 1px solid rgb(26, 2, 116);
+}
+
+.contact-form input[type="submit"] {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #093a58;
+	border-bottom: 2px solid #093a58;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+
+aside {
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+aside > iframe {
+	max-width: 560px;
+	width: 100%;
+}
 
 /* ---- Float clearfix ---- */
 
@@ -112,20 +193,12 @@ img {
 ==================================== */
 
 
-
 @media (min-width: 769px) {
 	.main-header,
-	.row {
-		width: 80%;
+	.container {
+		width: 90%;
 		margin: 0 auto;
 		max-width: 1150px;
 	}
 }
 
-@media (min-width: 1025px) {
-	.main-header,
-	.row {
-		width: 80%;
-		max-width: 1150px;
-	}
-}
