@@ -152,8 +152,8 @@ aside > iframe {
 .anchor::before {
     content: "";
     display: block;
-    height: 180px; 
-    margin: -180px 0 0; 
+    height: 175px; 
+    margin: -175px 0 0; 
 }
 
 @media (min-width: 769px) {
@@ -176,8 +176,8 @@ aside > iframe {
     }
 
     .anchor::before {
-        height: 100px; 
-        margin: -100px 0 0; 
+        height: 120px; 
+        margin: -120px 0 0; 
     }
 }
 
