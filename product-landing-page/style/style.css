@@ -7,7 +7,9 @@
 }
 
 body {
+  padding-top: 170px;
   line-height: 1.6;
+  background-color: #eff4f7;
 }
 
 p {
@@ -30,20 +32,22 @@ img {
 
 /* ---- Navigation ---- */
 
-.main-nav {
-  margin: 5px;
+.main-header {
+  position: fixed;
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  width: 100%;
+  top: 0;
+  background-color: white;
 }
 
 .main-nav a {
   text-align: center;
+  padding: 3px 15px;
+  font-size: .95em;
+  text-transform: uppercase;
   display: block;
-  padding: 10px 15px;
 }
 
-.main-nav a {
-	font-size: .95em;
-	text-transform: uppercase;
-}
 
 
 /* ---- Layout Containers ---- */
@@ -66,8 +70,23 @@ img {
 
 /* ---- Page Elements ---- */
 
+#about img {
+  float: left;
+  max-width: 300px;
+  margin: 5px 20px 7px 0;
+  padding: 10px;
+  border: solid 1px #d9e4ea;
+}
+
 .logo {
-  width: 33%;
+  max-width: 175px;
+  width: 40%;
+}
+
+.tertiary h3 {
+  line-height: 1;
+  margin-block-start: 1em;
+  margin-block-end: .25em;
 }
 
 
@@ -77,13 +96,17 @@ img {
 
 @media (min-width: 769px) {
 
+  body {
+    padding-top: 80px;
+  }
+
   .container {
     width: 90%;
     margin: 0 auto;
   }
 
-  .col {
-    float: left;
+  header {
+    padding-bottom: 10px;
   }
 
   .logo {
@@ -96,6 +119,7 @@ img {
   }
 
   .main-nav {
+    margin-top: 20px;
     float: right;
   }
 
