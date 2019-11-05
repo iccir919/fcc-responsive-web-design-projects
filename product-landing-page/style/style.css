@@ -6,21 +6,23 @@
   box-sizing: border-box;
 }
 
-
-#about p {
-  line-height: 1.4;
+body {
+  line-height: 1.6;
 }
 
-
-.bio-feat-pic {
-  float: left;
-  width: 300px;
-  margin-top: 5px;
-  margin-right: 25px;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: solid 1px #d9e4ea;
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
 }
+
+a {
+	text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 
 /* ================================= 
   Base Layout Styles
@@ -28,68 +30,93 @@
 
 /* ---- Navigation ---- */
 
-.main-nav li {
-  text-align: center;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  float: left;
-}
-
-#header-img {
-  width: 36%;
-}
-
 .main-nav {
-  display: inline-block;
+  margin: 5px;
 }
 
 .main-nav a {
-  padding: 10px 15px;
+  text-align: center;
   display: block;
+  padding: 10px 15px;
 }
 
+.main-nav a {
+	font-size: .95em;
+	text-transform: uppercase;
+}
+
+
 /* ---- Layout Containers ---- */
+
+.main-header {
+  text-align: center;
+  padding-top: .5em;
+  padding-top: .5em;
+}
 
 .container {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-.main-header {
-  text-align: center;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  margin-bottom: 30px;
-  overflow: hidden;
+.col {
+  padding-left: 1em;
+  padding-right: 1em;
 }
+
+/* ---- Page Elements ---- */
+
+.logo {
+  width: 33%;
+}
+
 
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
+
   .container {
-    width: 80%;
-    max-width: 1150px;
+    width: 90%;
     margin: 0 auto;
   }
 
+  .col {
+    float: left;
+  }
+
+  .logo {
+    float: left;
+  }
+
+  .primary,
+  .secondary {
+    width: 33%;
+  }
+
   .main-nav {
-		float: right;
-	}
+    float: right;
+  }
 
-	.main-nav li {
-		margin-left: 12px;
-	}
-
-	.logo {
-		float: left;
-	}
+  .main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+	/* ---- Float clearfix ---- */
 
 	.clearfix::after {
-		content: "";
+		content: " ";
 		display: table;
 		clear: both;
 	}
 
 }
+
+@media (min-width: 1025px) {
+  .container {
+    width: 80%;
+    max-width: 1150px;
+  }
+}
+
