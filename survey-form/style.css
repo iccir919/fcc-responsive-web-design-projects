@@ -1,0 +1,33 @@
+
+
+:root {
+    --background-color: green;
+}
+
+@media (max-width: 350px) {
+
+    :root {
+        --backround-color: red;
+    }
+}
+
+body {
+    background: var(--background-color);
+}
+
+form {
+    /* change code below */
+    --background: gray;
+    --font: white;
+    --button-inside: orange;
+    /* change code above */
+
+    background: gray;
+    background: var(--background, gray);
+}
+
+[type='checkbox'] {
+    margin: 10px 0px 15px 0;
+}
+
+
