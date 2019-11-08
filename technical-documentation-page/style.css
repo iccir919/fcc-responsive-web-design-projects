@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+}
+
+header {
+    font-size: 2em;
+}
+
+#navbar {
+    width: 20%;
+    height: 100%;
+    padding-top: 1.25em;
+    border-right: 2px solid gray;
+}
+
+#navbar header {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+ul {
+    padding-inline-start: 0px;
+    list-style: none;
+}
+
+li {
+    padding: 1em 0 1em 1em;
+    font-size: 1.25em;
+    border-top: 2px solid gray;
+}
+
+#main-doc {
+    width: 80%;
+    padding-left: 1em;
+}
+
+
+
