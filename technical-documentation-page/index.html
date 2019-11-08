@@ -8,8 +8,9 @@
     <body>
         <div class="container">
             <nav id="navbar">
-                <header>Important ES6 Features</header>
+                <header>Important <div id="ES6">ES6</div> Features</header>
                 <ul>
+                    <li>Introduction</li>
                     <li>let and const keywords</li>
                     <li>Arrow functions</li>
                     <li>Default parameters</li>
@@ -24,9 +25,37 @@
             <main id="main-doc">
                 <section class="main-section">
                     <header>Introduction</header>
+                    <p>ECMAScript 6 is also known as ES6 and ECMAScript 2015. Some people call it JavaScript 6.</p>
+                    <p>ECMAScript is a scripting-language specification. It was created to standardize JavaScript to help foster multiple independent implementations.</p>
+                    <p>The first edition of ECMA-262 was adopted by the Ecma General Assembly in June 1997. Several editions of the language standard have been published since then. The name "ECMAScript" was a compromise between the organizations involved in standardizing the language, especially Netscape and Microsoft, whose disputes dominated the early standards sessions.</p>
+                    <p>There are ten editions of ECMA-262 published. Work on version 10 of the standard was finalized in June 2019. Version 6 was finalized in June 2015.</p>
+                    <cite>-<a href="https://en.wikipedia.org/wiki/ECMAScript">Wikipedia</a></cite>
+                    <p>This documentation of ES6 does not cover all of the features. I picked the topics I find most relevant to my experience in coding with JavaScript. The content of these sections are a remix of the ES6 lessons by <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>.</p>
                 </section>
                 <section class="main-section">
                     <header>Let and const keywords</header>
+                    <p>One of the biggest problems with declaring variables with the var keyword is that you can overwrite variable declarations without an error.</p>
+                    <code>
+                        var camper = 'James'; <br>
+                        var camper = 'David'; <br>
+                        console.log(camper); 
+                        // logs 'David'
+                    </code>
+                    <p>A new keyword called let was introduced in ES6 to solve this potential issue with the var keyword. If you were to replace var with let in the variable declarations of the code above, the result would be an error.</p>
+                    <code>
+                        let camper = 'James'; <br>
+                        let camper = 'David'; // throws an error
+                    </code>
+                    <p>Also, when you declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.</p>
+                    <code>
+                        let num = 0; <br>
+                        for (let i = 1; i < 3; i++) { <br>
+                        num += i; <br>
+                        } <br>
+                        console.log(i); // returns "i is not defined" <br>
+                        consosle.log(num); // returns 3
+                    </code>
+                    <hr>
                 </section>
                 <section class="main-section">
                     <header>Arrow functions</header>

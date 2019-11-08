@@ -1,5 +1,5 @@
 .container {
-    display: flex;
+    font-family: arial;
 }
 
 header {
@@ -7,15 +7,21 @@ header {
 }
 
 #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 20%;
-    height: 100%;
-    padding-top: 1.25em;
+    height: 100vh;
+    padding-top: .25em;
     border-right: 2px solid gray;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #navbar header {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.25em;
+    line-height: 1.5;
 }
 
 ul {
@@ -30,8 +36,19 @@ li {
 }
 
 #main-doc {
-    width: 80%;
-    padding-left: 1em;
+    width: 75%;
+    margin: 3% 3% 0 22%;
+
+
+}
+
+#ES6 {
+    margin: auto;
+    background-color: #F0DB4F;
+    width: 4em;
+    font-weight: bold;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 
 
