@@ -19,8 +19,8 @@
                     <li><a class="nav-link" href="#Destructuring_assignment">Destructuring assignment</a></li>
                     <li><a class="nav-link" href="#Template_literals">Template literals</a></li>
                     <li><a class="nav-link" href="#Class_keyword">Class keyword</a></li>
-                    <!-- <li>Promises</li>
-                    <li>Modules</li> -->
+                    <li><a class="nav-link" href="#Modules">Modules</a></li>
+                    <li><a class="nav-link" href="#Promises">Promises</a></li>
                 </ul>
             </nav>
             <main id="main-doc">
@@ -240,12 +240,99 @@
                     </code>
                     <p><strong>Note: </strong>UpperCamelCase should be used by convention for ES6 class names, as in SpaceShuttle used above.</p>
                 </section>
-                <!-- <section class="main-section">
-                    <header>Promises</header>
-                </section>
-                <section class="main-section">
+                <section class="main-section" id="Modules">
                     <header>Modules</header>
-                </section> -->
+                    <p>In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. Such a file requires a script in your HTML document with a type of module.</p>
+                    <code>
+                            &lt;script type="module" src="filename.js">
+                    </code>
+                    <hr>
+                    <p>If you want to use a function in several different JavaScript files, you need to first export it.</p>
+                    <code>
+                        export const add = (x, y) => { <br>
+                            return x + y; <br>
+                        }
+                    </code>
+                    <p>The above is a common way to export a single function, but you can achieve the same thing like this:</p>
+                    <code>
+                        const add = (x, y) => { <br>
+                            return x + y; <br>
+                        } <br> 
+                        export { add }; <br>
+                    </code>
+                    <hr>
+                    <p>import allows you to choose which parts of a file or module to load. In the previous lesson</p>
+                    <code>
+                        import { add, subtract } from './math_functions.js';
+                    </code>
+                    <p>Here, import will find add in math_functions.js, import just that function for you to use, and ignore the rest. The ./ tells the import to look for the math_functions.js file in the same folder as the current file. The relative file path (./) and file extension (.js) are required when using import in this way.</p>
+                    <hr>
+                    <p>Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the import * as syntax.</p>
+                    <code>import * as myMathModule from "./math_functions.js";</code>
+                    <p>The above import statement will create an object called myMathModule. This is just a variable name, you can name it anything.</p>
+                    <p>Here's how you can use the add and subtract functions that were imported:</p>
+                    <code>
+                        myMathModule.add(2,3); <br>
+                        myMathModule.subtract(5,3);
+                    </code>
+                    <hr>
+                    <p>There is another export syntax you need to know, known as <em>>export default</em>.</p>
+                    <p>Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.</p>
+                    <code>
+                        // named function <br>
+                        export default function add(x, y) { <br>
+                            return x + y; <br>
+                        } <br>
+                        
+                        // anonymous function <br>
+                        export default function(x, y) { <br>
+                            return x + y; <br>
+                        } 
+                    </code>
+                    <p>Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use export default with var, let, or const</p>
+                    <hr>
+                    <p>To import a default export, you need to use a different import syntax.</p>
+                    <code>import add from "./math_functions.js";</code>
+                    <p>The syntax differs in one key place. The imported value, add, is not surrounded by curly braces ({}). add here is simply a variable name for whatever the default export of the math_functions.js file is.</p>
+                </section>
+                <section class="main-section" id="Promises">
+                    <header>Promises</header>
+                    <p>A promise in JavaScript is exactly what it sounds like - you use it to make a promise to do something, usually asynchronously. When the task completes, you either fulfill your promise or fail to do so. </p>
+                    <p>Promise is a constructor function, so you need to use the new keyword to create one. It takes a function, as its argument, with two parameters - resolve and reject. These are methods used to determine the outcome of the promise. The syntax looks like this:</p>
+                    <code>
+                        const myPromise = new Promise((resolve, reject) => { <br>
+
+                        });
+                    </code>
+                    <p>A promise has three states: pending, fulfilled, and rejected. The promise you created in the last challenge is forever stuck in the pending state because you did not add a way to complete the promise. The resolve and reject parameters given to the promise argument are used to do this. resolve is used when you want your promise to succeed, and reject is used when you want it to fail. These are methods that take an argument, as seen below.</p>
+                    <code>
+                        const myPromise = new Promise((resolve, reject) => { <br>
+                            if(condition here) { <br>
+                                resolve("Promise was fulfilled"); <br>
+                            } else { <br>
+                                reject("Promise was rejected"); <br>
+                            } <br>
+                        });
+                    </code>
+                    <p>The example above uses strings for the argument of these functions, but it can really be anything. Often, it might be an object, that you would use data from, to put on your website or elsewhere.</p>
+                    <hr>
+                    <p>Promises are most useful when you have a process that takes an unknown amount of time in your code (i.e. something asynchronous), often a server request. When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. This can be achieved by using the then method. The then method is executed immediately after your promise is fulfilled with resolve. Here’s an example:</p>
+                    <code>
+                        myPromise.then(result => { <br>
+                            // do something with the result. <br>
+                        });
+                    </code>
+                    <p>result comes from the argument given to the resolve method.</p>
+                    <hr>
+                    <p>catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called. Here’s the syntax:</p>
+                    <code>
+                        myPromise.catch(error => { <br>
+                            // do something with the error. <br>
+                        });
+                    </code>
+                    <p>error is the argument passed in to the reject method.</p>
+                    <p><strong>Note: </strong>the then and catch methods can be chained to the promise declaration if you choose.</p>
+                </section>
             </main>
         </div>
     </body>
