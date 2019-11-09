@@ -10,16 +10,17 @@
             <nav id="navbar">
                 <header>Important <div id="ES6">ES6</div> Features</header>
                 <ul>
-                    <li>Introduction</li>
-                    <li>let and const keywords</li>
-                    <li>Arrow functions</li>
-                    <li>Default parameters</li>
-                    <li>Destructuring assignment</li>
-                    <li>Multi-line strings</li>
-                    <li>Template literals</li>
-                    <li>Class keyword</li>
-                    <li>Promises</li>
-                    <li>Modules</li>
+                    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                    <li><a class="nav-link" href="#let_and_const_keywords">let and const keywords</a></li>
+                    <li><a class="nav-link" href="#Arrow_functions">Arrow functions</a></li>
+                    <li><a class="nav-link" href="#Default_parameters">Default parameters</a></li>
+                    <li><a class="nav-link" href="#Rest_operator">Rest operator</a></li>
+                    <li><a class="nav-link" href="#Spread_operator">Spread operator</a></li>
+                    <li><a class="nav-link" href="#Destructuring_assignment">Destructuring assignment</a></li>
+                    <li><a class="nav-link" href="#Template_literals">Template literals</a></li>
+                    <li><a class="nav-link" href="#Class_keyword">Class keyword</a></li>
+                    <!-- <li>Promises</li>
+                    <li>Modules</li> -->
                 </ul>
             </nav>
             <main id="main-doc">
@@ -55,53 +56,196 @@
                         console.log(i); // returns "i is not defined" <br>
                         consosle.log(num); // returns 3
                     </code>
-                    <p><strong>Important note:</strong>  All declarations (function, var, let, const and class) are hoisted in JavaScript, while the var declarations are initialized with undefined, but let and const declarations remain uninitialized.</p>
+                    <p><strong>Note:</strong> All declarations are hoisted in JavaScript: 
+                        <ul>
+                            <li>function</li>
+                            <li>var</li>
+                            <li>let</li>
+                            <li>const</li>
+                            <li>class</li>
+                        </ul>
+                        var declarations are initialized with undefined. <br>
+                        let and const declarations remain uninitialized.</p>
                     <hr>
-                    <p>const has all the awesome features that let has (block-scoped), with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.</p>
+                    <p>const has all the awesome features that let has (block-scoping), with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.</p>
                     <code>
                             const FAV_PET = "Cats"; <br>
                             FAV_PET = "Dogs"; // returns error
                     </code>
                     <p> A common practice when naming constants is to use all uppercase letters, with words separated by an underscore.</p>
+                    <p>it is important to understand that objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.</p>
+                    <code>
+                        const s = [5, 6, 7]; <br>
+                        s = [1, 2, 3]; // throws error, trying to assign a const <br>
+                        s[2] = 45; // works just as it would with an array declared with var or let <br>
+                        console.log(s); // returns [5, 6, 45]
+                    </code>
                 </section>
-                <section class="main-section">
+                <section class="main-section" id="Arrow_functions">
                     <header>Arrow functions</header>
-                    <p>In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.</p>
+                    <p>Arrow functions simplify your syntax and cut down on the overall amount of code you need to write for a function.</p>
                     <code>
                         const myFunc = function() { <br>
                             const myVar = "value"; <br>
                             return myVar; <br>
                         }
                     </code>
-                    <p>ES6 provides us with the syntactic sugar to not have to write anonymous functions this way.</p>
+                    <p>Take a look at the new ES6 syntactic sugar to write functions.</p>
                     <code>
                         const myFunc = () => { <br>
                             const myVar = "value"; <br>
                             return myVar; <br>
                         }                        
                     </code>
+                    <p>Also, arrow functions keep 'this' from changing. It will remain in the same scope as the function using it, making it much more effective for DOM interactions, like button presses.</p>
+                    <p>We can stop using that = this or self = this or _this = this or .bind(this)</p>
                 </section>
-                <section class="main-section">
+                <section class="main-section" id="Default_parameters">
                     <header>Default parameters</header>
+                    <p>Default parameters kick in when the argument is not specified (it is undefined). </p>
+                    <p>In ES5, we were using logic OR operator.</p>
+                    <code>
+                        var calculateArea = function(height, width) {  <br>
+                            height =  height || 50; <br>
+                            width = width || 80; <br>
+                            // logic <br>
+                        }
+                    </code>
+                    <p>In ES6, we can put the default values right in the signature of the functions.</p>
+                    <code>
+                        const greeting = (name = "Anonymous") => { <br>
+                        return "Hello " + name; <br>
+                        } <br>
+                        console.log(greeting("John")); // Hello John <br>
+                        console.log(greeting()); // Hello Anonymous
+                    </code>
+                    <p>You can add default values for as many parameters as you want.</p>
                 </section>
-                <section class="main-section">
+                <section class="main-section" id="Rest_operator">
+                    <header>Rest operator</header>
+                    <p>With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.</p>
+                    <code>
+                        const sum = (...args) => { <br>
+                            return args.reduce((a, b) => a + b, 0); <br>
+                        } <br>
+                        console.log(sum(1, 2, 3)); // 6
+                    </code>
+                    <p>The rest parameter eliminates the need to check the args array and allows us to apply map(), filter() and reduce() on the parameters array.</p>
+                </section>
+                <section class="main-section" id="Spread_operator">
+                    <header>Spread operator</header>
+                    <p>ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.</p>
+                    <p>In ES5, we would have to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply method</a> from the Function prototype.</p>
+                    <code>
+                        var arr = [6, 89, 3, 45]; <br>
+                        var maximus = Math.max.apply(null, arr); // returns 89
+                    </code>
+                    <p>Here is the same thing but in ES6. The spread operator makes this syntax much better to read and maintain.</p>
+                    <code>
+                        const arr = [6, 89, 3, 45]; <br>
+                        const maximus = Math.max(...arr); // returns 89
+                    </code>
+                    <p>...arr returns an unpacked array. In other words, it spreads the array. </p>
+                    <p>However, the spread operator only works in-place, like in an argument to a function or in an array literal.</p>
+                </section>
+                <section class="main-section" id="Destructuring_assignment">
                     <header>Destructuring assignment</header>
+                    <p>The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variable.</p>
+                    <p>In ES5, we had to use below approach.</p>
+                    <code>
+                        const user = { name: 'John Doe', age: 34 }; <br>
+
+                        const name = user.name; // name = 'John Doe' <br>
+                        const age = user.age; // age = 34 
+                    </code>
+                    <p>
+                        In ES6, we can replace the ES5 code above with this:
+                    </p>
+                    <code>
+                        const { name, age } = user; <br>
+                        // name = 'John Doe', age = 34
+                    </code>
+                    <hr>
+                    <p>Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.</p>
+                    <p>Using the same object from the last example:</p>
+                    <code>const user = { name: 'John Doe', age: 34 };</code>
+                    <p>Here's how you can give new variable names in the assignment:</p>
+                    <code>
+                        const { name: userName, age: userAge } = user; <br>
+                        // userName = 'John Doe', userAge = 34
+                    </code>
+                    <hr>
+                    <p>Destructuring also works for arrays.</p>
+                    <p>One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.</p>
+                    <code>
+                        const [a, b] = [1, 2, 3, 4, 5, 6]; <br>
+                        console.log(a, b); // 1, 2
+                    </code>
+                    <p>We can also access the value at any index in an array with destructuring by using commas to reach the desired index:</p>
+                    <code>
+                        const [a, b,,, c] = [1, 2, 3, 4, 5, 6]; <br>
+                        console.log(a, b, c); // 1, 2, 5
+                    </code>
+                    <hr>
+                    <p>In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.</p>
+                    <p>The result is similar to Array.prototype.slice().</p>
+                    <code>
+                        const [a, b, ...arr] = [1, 2, 3, 4, 5, 7]; <br>
+                        console.log(a, b); // 1, 2 <br>
+                        console.log(arr); // [3, 4, 5, 7]
+                    </code>
+                    <hr>
+                    <p>In some cases, you can destructure the object in a function argument itself.</p>
+                    <p>Consider the code below:</p>
+                    <code>
+                        const profileUpdate = (profileData) => { <br>
+                            const { name, age, nationality, location } = profileData; <br>
+                            // do something with these variables <br>
+                        }
+                    </code>
+                    <p>This effectively destructures the object sent into the function. This can also be done in-place:</p>
+                    <code>
+                        const profileUpdate = ({ name, age, nationality, location }) => { <br>
+                            /* do something with these fields */ <br>
+                        }
+                    </code>
                 </section>
-                <section class="main-section">
-                    <header>Multi-line strings</header>
-                </section>
-                <section class="main-section">
+                <section class="main-section" id="Template_literals">
                     <header>Template literals</header>
+                    <p>The template literal is a special type of string that makes creating complex strings easier.</p>
+                    <p> Prior to ES6, you needed to rely on somewhat messy string concatenation to achieve a similar effect, and the resulting code was anything but clean.</p>
+                    <code>var greeting = "Hello " + first + " " + last +"! Welcome back!";</code>
+                    <p>In ES6, we can use a new syntax ${PARAMETER} inside of the back-ticked string.</p>
+                    <code>let greeting = "Hello ${first} ${last}! Welcome back!";</code>
+                    <p>Also, template literals allow you to create multi-line strings and to use string interpolation features to create strings.</p>
                 </section>
-                <section class="main-section">
+                <section class="main-section" id="Class_keyword">
                     <header>Class keyword</header>
+                    <p>ES6 provides a new syntax to help create objects, using the keyword class.</p>
+                    <p>In ES5, we usually define a constructor function, and use the new keyword to instantiate an object.</p>
+                    <code>
+                        var SpaceShuttle = function(targetPlanet){ <br>
+                            this.targetPlanet = targetPlanet; <br>
+                        } <br>
+                        var zeus = new SpaceShuttle('Jupiter'); <br>
+                    </code>
+                    <p>The class syntax simply replaces the constructor function creation:</p>
+                    <code>
+                        class SpaceShuttle { <br>
+                            constructor(targetPlanet) { <br>
+                                this.targetPlanet = targetPlanet; <br>
+                            } <br>
+                        } <br>
+                        const zeus = new SpaceShuttle('Jupiter');
+                    </code>
+                    <p><strong>Note: </strong>UpperCamelCase should be used by convention for ES6 class names, as in SpaceShuttle used above.</p>
                 </section>
-                <section class="main-section">
+                <!-- <section class="main-section">
                     <header>Promises</header>
                 </section>
                 <section class="main-section">
                     <header>Modules</header>
-                </section>
+                </section> -->
             </main>
         </div>
     </body>
