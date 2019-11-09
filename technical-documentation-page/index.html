@@ -23,7 +23,7 @@
                 </ul>
             </nav>
             <main id="main-doc">
-                <section class="main-section">
+                <section class="main-section" id="Introduction">
                     <header>Introduction</header>
                     <p>ECMAScript 6 is also known as ES6 and ECMAScript 2015. Some people call it JavaScript 6.</p>
                     <p>ECMAScript is a scripting-language specification. It was created to standardize JavaScript to help foster multiple independent implementations.</p>
@@ -32,8 +32,8 @@
                     <cite>-<a href="https://en.wikipedia.org/wiki/ECMAScript">Wikipedia</a></cite>
                     <p>This documentation of ES6 does not cover all of the features. I picked the topics I find most relevant to my experience in coding with JavaScript. The content of these sections are a remix of the ES6 lessons by <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>.</p>
                 </section>
-                <section class="main-section">
-                    <header>Let and const keywords</header>
+                <section class="main-section" id="let_and_const_keywords">
+                    <header>let and const keywords</header>
                     <p>One of the biggest problems with declaring variables with the var keyword is that you can overwrite variable declarations without an error.</p>
                     <code>
                         var camper = 'James'; <br>
@@ -55,10 +55,31 @@
                         console.log(i); // returns "i is not defined" <br>
                         consosle.log(num); // returns 3
                     </code>
+                    <p><strong>Important note:</strong>  All declarations (function, var, let, const and class) are hoisted in JavaScript, while the var declarations are initialized with undefined, but let and const declarations remain uninitialized.</p>
                     <hr>
+                    <p>const has all the awesome features that let has (block-scoped), with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.</p>
+                    <code>
+                            const FAV_PET = "Cats"; <br>
+                            FAV_PET = "Dogs"; // returns error
+                    </code>
+                    <p> A common practice when naming constants is to use all uppercase letters, with words separated by an underscore.</p>
                 </section>
                 <section class="main-section">
                     <header>Arrow functions</header>
+                    <p>In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.</p>
+                    <code>
+                        const myFunc = function() { <br>
+                            const myVar = "value"; <br>
+                            return myVar; <br>
+                        }
+                    </code>
+                    <p>ES6 provides us with the syntactic sugar to not have to write anonymous functions this way.</p>
+                    <code>
+                        const myFunc = () => { <br>
+                            const myVar = "value"; <br>
+                            return myVar; <br>
+                        }                        
+                    </code>
                 </section>
                 <section class="main-section">
                     <header>Default parameters</header>

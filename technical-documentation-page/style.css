@@ -31,15 +31,13 @@ ul {
 
 li {
     padding: 1em 0 1em 1em;
-    font-size: 1.25em;
+    font-size: 1.15em;
     border-top: 2px solid gray;
 }
 
 #main-doc {
     width: 75%;
     margin: 3% 3% 0 22%;
-
-
 }
 
 #ES6 {
