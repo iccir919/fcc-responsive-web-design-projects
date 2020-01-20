@@ -72,6 +72,18 @@
                         s[2] = 45; // works just as it would with an array declared with var or let <br>
                         console.log(s); // returns [5, 6, 45]
                     </code>
+                    <hr>
+                    <p>Hoisting is JavaScript's default behavior of moving declarations to the top. JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Variables declared with the following are hoisted:</p>
+                    <ul>
+                        <li>var</li>
+                        <li>class</li>
+                        <li>function</li>
+                    </ul>
+                    <p>Variables and constants declared with the following are not hoisted and are not initialized until their definition is evaluated:</p>
+                    <ul>
+                        <li>let</li>
+                        <li>const</li>
+                    </ul>
                 </section>
                 <section class="main-section" id="Arrow_functions">
                     <header>Arrow functions</header>
