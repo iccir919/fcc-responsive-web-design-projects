@@ -4,8 +4,7 @@
         <title>Important Features of ES6</title>
 
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div class="container">
@@ -76,11 +75,11 @@
                     <p>Hoisting is JavaScript's default behavior of moving declarations to the top. JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Variables declared with the following are hoisted:</p>
                     <ul>
                         <li>var</li>
-                        <li>class</li>
                         <li>function</li>
                     </ul>
                     <p>Variables and constants declared with the following are not hoisted and are not initialized until their definition is evaluated:</p>
                     <ul>
+                        <li>class</li>
                         <li>let</li>
                         <li>const</li>
                     </ul>
@@ -101,8 +100,7 @@
                             return myVar; <br>
                         }                        
                     </code>
-                    <p>Also, arrow functions keep 'this' from changing. It will remain in the same scope as the function using it, making it much more effective for DOM interactions, like button presses.</p>
-                    <p>We can stop using that = this or self = this or _this = this or .bind(this)</p>
+                    <p>Also, arrow functions keep 'this' from changing. It will remain in the same scope as the function using it, making it much more effective for DOM interactions, like button presses. We can stop using that = this or self = this or _this = this or .bind(this)</p>
                 </section>
                 <section class="main-section" id="Default_parameters">
                     <header>Default parameters</header>
@@ -340,5 +338,5 @@
             </main>
         </div>
     </body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
