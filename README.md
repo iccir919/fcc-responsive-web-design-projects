@@ -8,3 +8,4 @@ The goal of these projects is to use HTML, JavaScript, and CSS to complete this 
 - <strong>A Technical Documentation Page</strong> - 
 [Important Features of ES6](https://iccir919.github.io/fcc-responsive-web-design-projects/technical-documentation-page/)
 - <strong>A Tribute Page</strong> - [Walt Disney Tribute Page](https://github.com/iccir919/fcc-responsive-web-design-projects/tree/master/tribute-page)
+- <strong>Personal Portfolio</strong> - [Portfolio of Neil Ricci](https://github.com/iccir919/fcc-responsive-web-design-projects/tree/master/portfolio)
