@@ -22,10 +22,10 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -34,14 +34,15 @@
         <main role="main">
             <!-- Welcome section
             ================================================== -->
-            <section id="welcome-section" class="jumbotron text-center">
-                <div class="container">
+            <section class="jumbotron text-center">
+                <div id="welcome-section" class="container">
                     <div class="row">
                         <div class="col-lg-5 align-self-center">
-                            <h1 >Welcome to the portfolio of Neil Ricci</h1>
+                            <h2 >Welcome to the portfolio of</h2>
+                            <h1>Neil Ricci</h1>
                             <p class="lead text-muted">A front end web developer with a solid knowledge of HTML, CSS, and JavaScript, a customer support specialist for tech companies, an amateur sketch artist (with a pen specialty), and a lifetime theme park enthusiast.</p>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-7 align-self-center">
                             <img src="images/golden-gate.jpg" class="img-fluid" alt="Responsive image">
                         </div>
                     </div>
@@ -59,20 +60,23 @@
                 <div class="col-lg-4 project-tile">
                     <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/heart-beat.png"/>
                     <h2>Pulse Watch</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>A client-side JavaScript application that helps to visualize and/or export Fitbit historical heart rate data. Since it's launch in 2018, Pulse Watch has helped over 4,000 Fitbit users.</p>
+                    <p><a class="btn btn-secondary" href="https://iccir919.github.io/pulseWatch/public/" role="button" target="_blank">Check it out &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 project-tile">
                     <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/100-points-emoji.png"/>
                     <h2>100 Days of Code</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>
+                        What started out as a set of rules to help people commit to learning to code consistently, it has attracted a community of like-minded people.
+                    <p><a class="btn btn-secondary" href="https://github.com/iccir919/100-days-of-code/blob/master/log.md" role="button" target="_blank">Follow my log &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 project-tile">
                     <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/freecodecamp.jpg"/>
                     <h2>FreeCodeCamp</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>
+                        A curriculum that's divided into Responsive Web Design, JavaScript Algorithms and Data Structures, Front End Libraries, Data Visualization, APIs and Microservices, and Information Security and Quality Assurance. 
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View my profile &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
             
@@ -107,12 +111,12 @@
                     </div>
                     <div id="connect-links" class="col-sm-3 offset-sm-2 mt-4">
                         <div class="row">
-                            <a href="#" class="col fa fa-3x fa-free-code-camp"></a>
-                            <a href="#" class="col fa fa-3x fa-twitter"></a>
+                            <a id="profile-link" href="https://www.freecodecamp.org/iccir919" class="col fa fa-3x fa-free-code-camp" target="_blank"></a>
+                            <a href="https://twitter.com/realNeilVR" class="col fa fa-3x fa-twitter" target="_blank"></a>
                         </div>
                         <div class="row">
-                            <a href="#" class="col fa fa-3x fa-linkedin"></a>
-                            <a href="#" class="col fa fa-3x fa-github"></a>
+                            <a href="https://www.linkedin.com/in/neil-ricci/" class="col fa fa-3x fa-linkedin" target="_blank"></a>
+                            <a href="https://github.com/iccir919/" class="col fa fa-3x fa-github" target="_blank"></a>
                         </div>
                     </div>
 
@@ -120,7 +124,7 @@
             </div>
 
             <!-- FOOTER -->
-            <footer class="container">
+            <footer id="contact" class="container">
                 <p>&copy; 2020 Neil Ricci</p>
             </footer>
         </main>

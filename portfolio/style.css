@@ -3,19 +3,13 @@
 /* Padding below the footer and lighter body text */
 
   body {
-      padding-top: 3rem;
-      padding-bottom: 1rem;
       color: #5a5a5a;
   }
 
-  .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  }  
-
   /* WELCOME SECTION
   -------------------------------------------------- */
-  #welcome-section {
-    min-height: 100vh; 
+  #welcome-section .row {
+    min-height: 100vh;
   }
   
   /* MARKETING CONTENT
@@ -32,6 +26,10 @@
   .projects .col-lg-4 p {
     margin-right: .75rem;
     margin-left: .75rem;
+  }
+
+  .projects img {
+    box-shadow: 10px 3px 5px gray;
   }
 
     /* Connect
@@ -51,6 +49,9 @@
     text-decoration: none;
   }
 
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  } 
 
   /* FOOTER
   -------------------------------------------------- */  
