@@ -90,26 +90,26 @@
             <div class="container">
                 <h2 class="mb-3">Connect</h2>
                 <div class="row" >
-                    <div class="col-sm-7">
+                    <div class="col-md-7">
                         <h3 class="mb-3">Send me a message</h3>
-                        <form>
+                        <form action="https://formspree.io/neil.ricci9@gmail.com" method="POST">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col">
-                                      <input type="text" class="form-control" placeholder="First name">
+                                      <input name="firstname" type="text" class="form-control" placeholder="First name">
                                     </div>
                                     <div class="col">
-                                      <input type="text" class="form-control" placeholder="Email address">
+                                      <input name="email" type="text" class="form-control" placeholder="Email address">
                                     </div>
                                   </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="message" class="form-control" placeholder="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
                         </form>
                     </div>
-                    <div id="connect-links" class="col-sm-3 offset-sm-2 mt-4">
+                    <div id="connect-links" class="col-md-3 offset-md-2 mt-4">
                         <div class="row">
                             <a id="profile-link" href="https://www.freecodecamp.org/iccir919" class="col fa fa-3x fa-free-code-camp" target="_blank"></a>
                             <a href="https://twitter.com/realNeilVR" class="col fa fa-3x fa-twitter" target="_blank"></a>

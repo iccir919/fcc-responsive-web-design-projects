@@ -3,13 +3,17 @@
 /* Padding below the footer and lighter body text */
 
   body {
-      margin-top: 2em;
       color: #5a5a5a;
+      margin-top: 48px;
+  }
+
+  main {
+    padding-top: 48px;
   }
 
   /* WELCOME SECTION
   -------------------------------------------------- */
-  #welcome-section .row {
+  #welcome-section {
     min-height: 100vh;
   }
   
@@ -31,10 +35,6 @@
 
   .projects img {
     box-shadow: 10px 3px 5px gray;
-  }
-
-  .project-tile h2 {
-    margin-top: 1em;
   }
 
     /* Connect
