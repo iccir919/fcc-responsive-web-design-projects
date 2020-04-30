@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- UTF-8 encoding, which is a way to encode Unicode text as binary data -->
         <meta charset="utf-8">
         <title>ECMAScript 6 - ECMAScript 2015</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
@@ -61,7 +62,19 @@
 
                 <p>Some people call it JavaScript 6.</p>
 
-                <p>This chapter will introduce some of the new features in ES6.</p>
+                <p>This documentation page will introduce some of the new features in ES6.</p>
+
+                <ul>
+                    <li>JavaScript <code class="codespan">let</code></li>
+                    <li>JavaScript <code class="codespan">const</code></li>
+                    <li>JavaScript Arrow Functions</li>
+                    <li>JavaScript Classes</li>
+                    <li>Default parameter values</li>
+                    <li><code class="codespan">Array.find()</code></li>
+                    <li><code class="codespan">Array.findIndex()</code></li>
+                    <li>Exponentiation (<code class="codespan">**</code>) (EcmaScript 2016)</li>
+                </ul>
+                
             </section>
             <section id="Browser_Support_for_ES6_(ECMAScript_2015)" class="main-section">
                 <header>
@@ -73,7 +86,7 @@
                     <h2>JavaScript let</h2>
                 </header>
 
-                <p>The let statement allows you to declare a variable with block scope.</p>
+                <p>The <code class="codespan">let</code> statement allows you to declare a variable with block scope.</p>
 
                 <div class="example">
                     <h4>Example</h4>
@@ -81,15 +94,15 @@
                         var x = 10; <br>
                         // Here x is 10 <br>
                         { <br>
-                        let x = 2; <br>
-                        // Here x is 2 <br>
+                            &nbsp; let x = 2; <br>
+                            &nbsp; // Here x is 2 <br>
                         } <br>
                         // Here x is 10 <br>
                     </code>
                 </div>
 
                 <footer>
-                    <p>Read more about let in the <a href="https://www.w3schools.com/js/js_let.asp">JavaScript Let</a> chapter.</p>
+                    <p>Read more about <code class="codespan">let</code> in the <a href="https://www.w3schools.com/js/js_let.asp">JavaScript Let</a> chapter.</p>
                 </footer>
             </section>
             <section id="JavaScript_const" class="main-section">
@@ -97,7 +110,7 @@
                     <h2>JavaScript const</h2>
                 </header>
 
-                <p>The const statement allows you to declare a constant (a JavaScript variable with a constant value).</p>
+                <p>The <code class="codespan">const</code> statement allows you to declare a constant (a JavaScript variable with a constant value).</p>
 
                 <p>Constants are similar to let variables, except that the value cannot be changed.</p>
 
@@ -107,15 +120,15 @@
                         var x = 10; <br>
                         // Here x is 10 <br>
                         { <br>
-                          const x = 2; <br>
-                          // Here x is 2 <br>
+                            &nbsp; const x = 2; <br>
+                            &nbsp; // Here x is 2 <br>
                         } <br>
                         // Here x is 10 <br>
                     </code>
                 </div>
 
                 <footer>
-                    <p>Read more about let in the <a href="https://www.w3schools.com/js/js_const.asp">JavaScript Const</a> chapter.</p>
+                    <p>Read more about <code class="codespan">const</code> in the <a href="https://www.w3schools.com/js/js_const.asp">JavaScript Const</a> chapter.</p>
                 </footer>
             </section>
             <section id="Arrow_Functions" class="main-section">
@@ -125,14 +138,14 @@
 
                 <p>Arrow functions allows a short syntax for writing function expressions.</p>
 
-                <p>You don't need the function keyword, the return keyword, and the curly brackets.</p>
+                <p>You don't need the <code class="codespan">function</code> keyword, the <code class="codespan">return</code> keyword, and the <strong>curly brackets</strong>.</p>
 
                 <div class="example">
                     <h3>Example</h3>
                     <code>
                         // ES5 <br>
                         var x = function(x, y) { <br>
-                           return x * y; <br>
+                            &nbsp; return x * y; <br>
                         } <br>
                         <br>
                         // ES6 <br>
@@ -140,13 +153,13 @@
                     </code>
                 </div>
 
-                <p>Arrow functions do not have their own this. They are not well suited for defining object methods.</p>
+                <p>Arrow functions do not have their own <code class="codespan">this</code>. They are not well suited for defining <strong>object methods</strong>.</p>
 
-                <p>Arrow functions are not hoisted. They must be defined before they are used.</p>
+                <p>Arrow functions are not hoisted. They must be defined <strong>before</strong> they are used.</p>
 
-                <p>Using const is safer than using var, because a function expression is always constant value.</p>
+                <p>Using <code class="codespan">const</code> is safer than using <code class="codespan">var</code>, because a function expression is always constant value.</p>
 
-                <p>You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
+                <p>You can only omit the <code class="codespan">return</code> keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
 
                 <div class="example">
                     <h3>Example</h3>
@@ -166,9 +179,9 @@
 
                 <p>ES6 introduced classes.</p>
 
-                <p>A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.</p>
+                <p>A class is a type of function, but instead of using the keyword <code class="codespan">function</code> to initiate it, we use the keyword class, and the properties are assigned inside a <code class="codespan">constructor()</code> method.</p>
                 
-                <p>Use the keyword class to create a class, and always add a constructor method.</p>
+                <p>Use the keyword <code class="codespan">class</code> to create a <code class="codespan">class</code>, and always add a constructor method.</p>
                 
                 <p>The constructor method is called each time the class object is initialized.</p>
                 <div class="example">
@@ -176,22 +189,23 @@
                     <p>A simple class definition for a class named "Car":</p>
                     <code>
                         class Car { <br>
-                            &nbsp constructor(brand) { <br>
-                                &nbsp &nbsp this.carname = brand; <br>
-                            &nbsp } <br>
+                            &nbsp; constructor(brand) { <br>
+                                &nbsp; &nbsp; this.carname = brand; <br>
+                            &nbsp; } <br>
                           } <br>
                     </code>
                 </div>
 
                 <p>Now you can create objects using the Car class:</p>
+                
                 <div class="example">
                     <h3>Example</h3>
                     <p>Create an object called "mycar" based on the Car class:</p>
                     <code>
                         class Car { <br>
-                            &nbsp constructor(brand) { <br>
-                                &nbsp &nbsp this.carname = brand; <br>
-                            &nbsp } <br>
+                            &nbsp; constructor(brand) { <br>
+                                &nbsp; &nbsp; this.carname = brand; <br>
+                            &nbsp; } <br>
                         } <br>
                         mycar = new Car("Ford");
                     </code>
@@ -212,8 +226,8 @@
                     <h3>Example</h3>
                     <code>
                         function myFunction(x, y = 10) { <br>
-                            &nbsp // y is 10 if not passed or undefined <br>
-                            &nbsp return x + y; <br>
+                            &nbsp; // y is 10 if not passed or undefined <br>
+                            &nbsp; return x + y; <br>
                         } <br>
                         myFunction(5); // will return 15
                     </code>
@@ -228,7 +242,7 @@
                     <h2>Array.find()</h2>
                 </header>
 
-                <p>The find() method returns the value of the first array element that passes a test function.</p>
+                <p>The <code class="codespan">find()</code> method returns the value of the first array element that passes a test function.</p>
 
                 <p>This example finds (returns the value of ) the first element that is larger than 18:</p>
 
@@ -239,7 +253,7 @@
                         var first = numbers.find(myFunction); <br>
                         <br>
                         function myFunction(value, index, array) { <br>
-                            &nbsp return value > 18; <br>
+                            &nbsp; return value > 18; <br>
                         }
                     </code>
                 </div>
@@ -257,7 +271,7 @@
                     <h2>Array.findIndex()</h2>
                 </header>
 
-                <p>The findIndex() method returns the index of the first array element that passes a test function.</p>
+                <p>The <code class="codespan">findIndex()</code> method returns the index of the first array element that passes a test function.</p>
 
                 <p>This example finds the index of the first element that is larger than 18:</p>
 
@@ -268,7 +282,7 @@
                         var first = numbers.findIndex(myFunction); <br>
                         <br>
                         function myFunction(value, index, array) { <br>
-                            &nbsp return value > 18; <br>
+                            &nbsp; return value > 18; <br>
                         }
                     </code>
                 </div>
@@ -289,14 +303,14 @@
                 <p>ES6 added 2 new methods to the Number object:</p>
 
                 <ul>
-                    <li>Number.isInteger()</li>
-                    <li>Number.isSafeInteger()</li>
+                    <li><code class="codespan">Number.isInteger()</code></li>
+                    <li><code class="codespan">Number.isSafeInteger()</code></li>
                 </ul>
 
                 <article class="sub-section">
                     <h3>The Number.isInteger() Method</h3>
 
-                    <p>The Number.isInteger() method returns true if the argument is an integer.</p>
+                    <p>The <code class="codespan">Number.isInteger()</code> method returns <code class="codespan">true</code> if the argument is an integer.</p>
 
                     <div class="example">
                         <h3>Example</h3>
@@ -311,7 +325,7 @@
 
                     <p>A safe integer is an integer that can be exactly represented as a double precision number.</p>
 
-                    <p>The Number.isSafeInteger() method returns true if the argument is a safe integer.</p>
+                    <p>The <code class="codespan">Number.isSafeInteger()</code> method returns <code class="codespan">true</code> if the argument is a safe integer.</p>
 
                     <div class="example">
                         <h3>Example</h3>
@@ -322,7 +336,7 @@
                     </div>
 
                     <aside>
-                        <p>Safe integers are all integers from -(253 - 1) to +(253 - 1).</p>
+                        <p>Safe integers are all integers from -(2^53 - 1) to +(2^53 - 1).</p>
                         <p>This is safe: 9007199254740991. This is not safe: 9007199254740992.</p>
                     </aside>
                 </article>
@@ -335,16 +349,16 @@
                 <p>ES6 also added 2 new global number methods:</p>
 
                 <ul>
-                    <li>isFinite()</li>
-                    <li>isNaN()</li>
+                    <li><code class="codespan">isFinite()</code></li>
+                    <li><code class="codespan">isNan()</code></li>
                 </ul>
 
                 <article class="sub-section">
                     <h3>The isFinite() Method</h3>
 
-                    <p>The global isFinite() method returns false if the argument is Infinity or NaN.</p>
+                    <p>The global <code class="codespan">isFinite()</code> method returns <code class="codespan">false</code> if the argument is <code class="codespan">Infinity</code> or <code class="codespan">NaN</code>.</p>
 
-                    <p>Otherwise it returns true:</p>
+                    <p>Otherwise it returns <code class="codespan">true</code>:</p>
 
                     <div class="example">
                         <h3>Example</h3>
@@ -357,7 +371,7 @@
                 <article class="sub-section">
                     <h3>The isNaN() Method</h3>
                     
-                    <p>The global isNaN() method returns true if the argument is NaN. Otherwise it returns false:</p>
+                    <p>The global <code class="codespan">isNaN()</code> method returns <code class="codespan">true</code> if the argument is <code class="codespan">NaN</code>. Otherwise it returns <code class="codespan">false</code>:</p>
 
                     <div class="example">
                         <h3>Example</h3>
@@ -372,7 +386,7 @@
                     <h2>Exponentiation Operator</h2>
                 </header>
         
-                <p>The exponentiation operator (**) raises the first operand to the power of the second operand.</p>
+                <p>The <strong>exponentiation</strong> operator (<code class="codespan">**</code>) raises the first operand to the power of the second operand.</p>
 
                 <div class="example">
                     <h3>Example</h3>
@@ -382,7 +396,7 @@
                     </code>
                 </div>
 
-                <p>x ** y produces the same result as Math.pow(x,y):</p>
+                <p><code class="codespan">x ** y</code> produces the same result as <code class="codespan">Math.pow(x,y)</code>:</p>
 
                 <div class="example">
                     <h3>Example</h3>
