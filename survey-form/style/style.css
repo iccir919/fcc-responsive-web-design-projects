@@ -45,6 +45,11 @@ input[type="checkbox"] {
     margin: 0 3px 8px 0;
 }
 
+#number {
+    width: 20%;
+    display: block;
+}
+
 select {
     padding: 6px;
     height: 32px;
@@ -73,6 +78,19 @@ legend {
     margin-bottom: 10px;
 }
 
+.number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 100%;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -83,3 +101,4 @@ label.light {
     display: inline;
     font-weight: 300;
 }
+

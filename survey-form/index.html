@@ -16,7 +16,7 @@
                 <p id="description">Please take this survey to describe to your bicycle habits and behaviors.</p>
                 <form id="survey-form">
                     <fieldset>
-                        <legend>Your basic info</legend>
+                        <legend><span class="number">1</span> Your basic info</legend>
                         <label class="light" id="name-label" for="name">Name:</label>
                         <input type="text" id="name" name="user_name" placeholder="Joe or Jane S." required>
                         <label class="light" id="email-label"  for="email">Email:</label>
@@ -27,10 +27,11 @@
                         <input type="number" id="number" name="user_age" min="18" max="115" placeholder="35" required>
                     </fieldset>
                     <fieldset>
-                        <legend>Your biking behavior</legend>
+                        <legend><span class="number">2</span> Your biking behavior</legend>
                         
                         <label for="dropdown">How often do you bicycle?</label>
                         <select id="dropdown" name="biking_frequency">
+                            <option value="">--Please choose an option--</option>
                             <option value="5_to_7_times_a_week">5-7 times a week</option>
                             <option value="2_to_4_times_a_week">2-4 times a week</option>
                             <option value="once_a_week">At least once a week</option>
