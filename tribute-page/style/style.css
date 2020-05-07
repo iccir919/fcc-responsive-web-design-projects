@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -44,7 +48,7 @@ html, body {
 }
 
 .timeline {
-    width: 90%;
+    width: 85%;
     text-align: left;
 }
 
@@ -58,7 +62,7 @@ html, body {
 }
 
 blockquote {
-    width: 85%;
+    width: 80%;
     font-style: italic;
     margin-bottom: 3em;
 }
