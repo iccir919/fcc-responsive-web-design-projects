@@ -1,17 +1,36 @@
-#navbar {
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
 }
 
-#navbar ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-    display: flex;
-    justify-content: space-evenly;
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
 }
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+
+/* ---- Page Elements ---- */
 
 #welcome-section {
+    display: flex;
     height: 100vh;
 }
 
+#welcome-text {
+    margin: auto;
+}
