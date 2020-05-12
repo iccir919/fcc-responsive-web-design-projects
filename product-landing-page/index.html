@@ -10,9 +10,9 @@
     </head>
     <body>
         <header id="header">
-            <div id="logo">
+            <div id="header-logo">
                 <img id="header-img" src="https://www.svgrepo.com/show/100814/brain.svg" alt="Computer drawing of a person's brain that highlights the area where memory is located">
-                <h1>Lacuna Inc.</h1>
+                <h1 id="header-name">LACUNA Inc.</h1>
             </div>
             <nav id="nav-bar">
                 <ul>
@@ -27,14 +27,14 @@
                     </li>
                 </ul>
             </nav>
-
-            <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Brain%27s_On-Off_Switch.jpg"> -->
         </header>
         <main>
-
-            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/UAlZ0SJzCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <section id="about">
+            <section id="banner">
+                <div class="col">
+                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/UAlZ0SJzCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="about">       
                 <h2>About Us</h2>
                 <p>Lacuna Inc. is the brainchild of Dr. Howard Mierzwiak, who after years of dedicated research has developed a cutting-edge, non-surgical procedure for the focused erasure of troubling memories. Dr. Mierzwiak received his Ph.D. in Neuroscience from Yale University in 1980 and has worked at numerous top-tier organizations where he has made many revolutionary discoveries on the topic of memory.</p>
 
@@ -43,18 +43,25 @@
                 <p>With tens of thousands of satisfied customers already, Lacuna Inc. has established a strong reputation in the medical community. Our procedure is offered to men and women of all ages, and it is perfectly safe, quick, and painless. We pride ourselves on our impeccable and 100% guaranteed descretion.</p>
             </section>
             <section id="process">
-                <h2>The Process</h2>
-                <h3>STEP ONE: CONSULTATION</h3>
-                <p>This meeting serves as an introduction to the facility and the staff. You will be given a tour of our state of the art facility and will get to sit down with Dr. Mierzwiak in person. Here is your chance to ask any questions you may have about the procedure. The Doctor will then ask a series of questions so that there is a clear understanding of your wishes and expectations.</p>
-
-                <h3>STEP TWO: PREPARATION FOR THE PROCEDURE</h3>
-                <p>If you decide to move forward, there are a series of tasks you must complete to ensure a successful procedure. This includes collecting any and all items or mementoes that tie to the targeted memory. You will bring these with you on the day of your procedure and our technicians will dispose of them properly.</p>
-
-                <h3>STEP THREE: MEMORY MAPPING</h3>
-                <p>Our technicians will construct a custom map of the memory we will be targeting. This aids us in the flawless extraction of your memory. Upon your approval, we can move forward with scheduling an appointment for the procedure.</p>
-
-                <h3>STEP FOUR: THE PROCEDURE</h3>
-                <p>The procedure uses our patented reverse timeline technique, which erases memories from most recent to the most historic and targets the emotional core that the memory builds upon. The prodecure is preformed by our technicians at your own home. The memories are essentially dissolved, and you will remember nothing of the procedure upon waking in their own bed.</p>
+                    <h2>The Process</h2>
+                    <div class="row">
+                        <div id="step-one" class="col">
+                            <h3>STEP ONE:<br>CONSULTATION</h3>
+                            <p>This meeting serves as an introduction to the facility and the staff. You will be given a tour of our state of the art facility and will get to sit down with Dr. Mierzwiak in person. Here is your chance to ask any questions you may have about the procedure. The Doctor will then ask a series of questions so that there is a clear understanding of your wishes and expectations.</p>
+                        </div>
+                        <div id="step-two" class="col">
+                            <h3>STEP TWO:<br>PREPARATION</h3>
+                            <p>If you decide to move forward, there are a series of tasks you must complete to ensure a successful procedure. This includes collecting any and all items or mementoes that tie to the targeted memory. You will bring these with you on the day of your procedure and our technicians will dispose of them properly.</p>
+                        </div>
+                        <div id="step-three" class="col">
+                            <h3>STEP THREE:<br>MAPPING</h3>
+                            <p>Our technicians will construct a custom map of the memory we will be targeting. This aids us in the flawless extraction of your memory. Upon your approval, we can move forward with scheduling an appointment for the procedure.</p>
+                        </div>
+                        <div id="step-four" class="col">
+                            <h3>STEP FOUR:<br>PROCEDURE</h3>
+                            <p>The procedure uses our patented reverse timeline technique, which erases memories from most recent to the most historic and targets the emotional core that the memory builds upon. The prodecure is preformed by our technicians at your own home. The memories are essentially dissolved, and you will remember nothing of the procedure upon waking in their own bed.</p>
+                        </div>
+                    </div>
             </section>
             <section id="contact">
                 <h2>Contact</h2>
@@ -65,13 +72,15 @@
                         <input id="submit" type="submit">
                     </form>
                 </aside>
-                <p><strong>Phone:</strong>212-555-0865</p>
-                <p><strong>Email:</strong>contact@lacunainc.com</p>
-                <address>
-                    Lacuna Inc.<br>
-                    210 E. Grand St.<br>
-                    New York, NY 10019
-                </address>
+                <div>
+                    <p><strong>Phone:</strong>212-555-0865</p>
+                    <p><strong>Email:</strong>contact@lacunainc.com</p>
+                    <address>
+                        Lacuna Inc.<br>
+                        210 E. Grand St.<br>
+                        New York, NY 10019
+                    </address>
+                </div>
             </section>
         </main>
         <footer>

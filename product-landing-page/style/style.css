@@ -7,6 +7,7 @@
 }
 
 body {
+  background-color: rgb(247, 243, 194);
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -24,4 +25,132 @@ a {
 
 img {
 	max-width: 100%;
+}
+
+h3 {
+  margin: 0;
+}
+
+.col {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+#header {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+#header-name {
+  margin: 0;
+}
+
+#header-logo {
+  display: flex;
+}
+
+#nav-bar,
+#header-logo {
+  justify-content: center;
+  align-self: center;
+}
+
+#nav-bar li {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+#nav-bar a {
+  font-size: .95em;
+  color: black;
+	text-transform: uppercase;
+}
+
+#nav-bar a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+#header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+#banner {
+  color: #fff;
+	background: #3acec2;
+	padding: 3.2em 0;
+  margin-bottom: 48px;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+/* ---- Page Elements ---- */
+#header-img {
+  width: 50px;
+}
+
+#step-one {
+  background: #4cd6cb;
+}
+
+#step-two {
+  background: #78e9df;
+}
+
+#step-three {
+  background: #a6ece7;
+}
+
+#step-four {
+  background: #c2e9e6;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  #header, 
+  section {
+    width: 90%;
+		margin: 0 auto;
+  }
+
+  #nav-bar ul,
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  #header,
+  section {
+    width: 80%;
+		max-width: 1150px;
+  }
+
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col {
+    width: 25%;
+  }
 }
