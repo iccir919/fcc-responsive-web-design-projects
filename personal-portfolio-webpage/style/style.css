@@ -144,8 +144,15 @@ main {
   }
 
   .project-tile {
+    flex: 1;
     padding-right: 1em;
     padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-tile a {
+    margin-top: auto;
   }
 }
 @media (min-width: 1025px) {

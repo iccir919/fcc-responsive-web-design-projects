@@ -9,7 +9,7 @@
         <title>Lacuna Inc.</title>
     </head>
     <body>
-        <header id="header">
+        <header class="row" id="header">
             <div id="header-logo">
                 <img id="header-img" src="https://www.svgrepo.com/show/100814/brain.svg" alt="Computer drawing of a person's brain that highlights the area where memory is located">
                 <h1 id="header-name">LACUNA Inc.</h1>
@@ -29,18 +29,27 @@
             </nav>
         </header>
         <main>
-            <section id="banner">
-                <div class="col">
-                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/UAlZ0SJzCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <section class="row" id="banner">
+                <div>
+                    <iframe id="video" src="https://www.youtube.com/embed/UAlZ0SJzCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+                <h4>
+                    Don't forget, with LACUNA, <br>
+                    <span style="font-style: italic;">you <span style="text-decoration: underline;">can</span> forget!</span>
+                </h4>
             </section>
             <section id="about">       
                 <h2>About Us</h2>
-                <p>Lacuna Inc. is the brainchild of Dr. Howard Mierzwiak, who after years of dedicated research has developed a cutting-edge, non-surgical procedure for the focused erasure of troubling memories. Dr. Mierzwiak received his Ph.D. in Neuroscience from Yale University in 1980 and has worked at numerous top-tier organizations where he has made many revolutionary discoveries on the topic of memory.</p>
-
-                <p>Lacuna Inc. was founded in 2003 to provide a state of the art research facility for the development of this procedure. Over the years, the project has progressed from a mere idea into a full-blown medical service, and Lacuna Inc. has grown right along with it. Now a full service clinic with a highly trained staff, Lacuna is just starting to tap into its potential.</p>
-                
-                <p>With tens of thousands of satisfied customers already, Lacuna Inc. has established a strong reputation in the medical community. Our procedure is offered to men and women of all ages, and it is perfectly safe, quick, and painless. We pride ourselves on our impeccable and 100% guaranteed descretion.</p>
+                <div class="row">
+                    <img id="about-img" src="images/doctor-howard.jpg">
+                    <div class="col" div="about-description">
+                        <p>Lacuna Inc. is the brainchild of Dr. Howard Mierzwiak, who after years of dedicated research has developed a cutting-edge, non-surgical procedure for the focused erasure of troubling memories. Dr. Mierzwiak received his Ph.D. in Neuroscience from Yale University in 1980 and has worked at numerous top-tier organizations where he has made many revolutionary discoveries on the topic of memory.</p>
+    
+                        <p>Lacuna Inc. was founded in 2003 to provide a state of the art research facility for the development of this procedure. Over the years, the project has progressed from a mere idea into a full-blown medical service, and Lacuna Inc. has grown right along with it. Now a full service clinic with a highly trained staff, Lacuna is just starting to tap into its potential.</p>
+                        
+                        <p>With tens of thousands of satisfied customers already, Lacuna Inc. has established a strong reputation in the medical community. Our procedure is offered to men and women of all ages, and it is perfectly safe, quick, and painless. We pride ourselves on our impeccable and 100% guaranteed descretion.</p>
+                    </div>
+                </div>
             </section>
             <section id="process">
                     <h2>The Process</h2>
@@ -65,21 +74,25 @@
             </section>
             <section id="contact">
                 <h2>Contact</h2>
-                <aside>
-                    Join our mailing list to learn first about product updates and seasonal deals!
-                    <form id="form" action="https://www.freecodecamp.com/email-submit">
-                        <input id="email" type="email"  name="email" placeholder="Your email address">
-                        <input id="submit" type="submit">
-                    </form>
-                </aside>
                 <div>
-                    <p><strong>Phone:</strong>212-555-0865</p>
-                    <p><strong>Email:</strong>contact@lacunainc.com</p>
-                    <address>
-                        Lacuna Inc.<br>
-                        210 E. Grand St.<br>
-                        New York, NY 10019
-                    </address>
+                    <aside id="mailing-list" class="row">
+                        Join our mailing list to learn first about product updates and seasonal deals!
+                        <form id="form" action="https://www.freecodecamp.com/email-submit">
+                            <input id="email" type="email"  name="email" placeholder="Your email address">
+                            <input id="submit" type="submit">
+                        </form>
+                    </aside>
+                    <div class="col" id="contact-methods">
+                        <div>
+                            <p><strong>Phone:</strong>212-555-0865</p>
+                            <p><strong>Email:</strong>contact@lacunainc.com</p>
+                        </div>
+                        <address class="col"> 
+                            Lacuna Inc.<br>
+                            210 E. Grand St.<br>
+                            New York, NY 10019
+                        </address>
+                    </div>
                 </div>
             </section>
         </main>

@@ -1,13 +1,9 @@
-/* ================================= 
-  Base Element Styles
-==================================== */
-
 * {
 	box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(247, 243, 194);
+    background-color: rgb(247, 243, 207);
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -20,7 +16,12 @@ ul {
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -36,31 +37,23 @@ h3 {
   padding-bottom: 1em;
 }
 
-/* ================================= 
-  Base Layout Styles
-==================================== */
-
-/* ---- Navigation ---- */
 #header {
+	padding-top: .5em;
+  padding-bottom: .5em;
   margin-top: 5px;
+  margin-bottom: 1em;
+}
+
+#header-logo {
   display: flex;
-  flex-direction: column;
 }
 
 #header-name {
   margin: 0;
 }
 
-#header-logo {
-  display: flex;
-}
-
-#nav-bar,
-#header-logo {
-  justify-content: center;
-  align-self: center;
-}
-
+#mailing-list,
+footer,
 #nav-bar li {
   padding: 10px 15px;
   text-align: center;
@@ -68,26 +61,29 @@ h3 {
 
 #nav-bar a {
   font-size: .95em;
-  color: black;
 	text-transform: uppercase;
 }
 
-#nav-bar a:hover {
-	color: #093a58;
-}
-
-/* ---- Layout Containers ---- */
-
-#header {
-	padding-top: .5em;
-	padding-bottom: .5em;
+.row {
+  display: flex;
+  flex-direction: column;
 }
 
 #banner {
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: #fff;
 	background: #3acec2;
-	padding: 3.2em 0;
-  margin-bottom: 48px;
+}
+
+#video {
+  width: 420px;
+  height: 275px;
+}
+
+#banner h4 {
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .col {
@@ -95,9 +91,48 @@ h3 {
 	padding-left: 1em;
 }
 
-/* ---- Page Elements ---- */
+#contact-methods {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+form {
+  margin-top: 0.5em;
+}
+
+#email {
+  border: none;
+  height: auto;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#submit {
+  padding: 10px 29px 13px 29px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #3ac162;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
 #header-img {
   width: 50px;
+}
+
+#header,
+#banner,
+#about .row {
+  align-items: center;
 }
 
 #step-one {
@@ -123,25 +158,33 @@ h3 {
 @media (min-width: 769px) {
   #header, 
   section {
-    width: 90%;
+    width: 80%;
 		margin: 0 auto;
   }
 
-  #nav-bar ul,
-  .row {
+  #video {
+    width: 560px;
+    height: 315px;
+  }
+
+  #nav-bar ul {
     display: flex;
+  }
+
+  #process .row {
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .col {
-    width: 50%;
+  #process .col {
+    flex: 1 50%;
   }
 }
 
 @media (min-width: 1025px) {
   #header,
   section {
-    width: 80%;
+    width: 70%;
 		max-width: 1150px;
   }
 
@@ -150,7 +193,18 @@ h3 {
     justify-content: space-between;
   }
 
-  .col {
-    width: 25%;
+  #banner {
+    margin-top: 1em;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #about .row {
+    flex-direction: row;
+    flex-direction: row-reverse;
+  }
+
+  #process .col {
+    flex: 1 25%;
   }
 }
