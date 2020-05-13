@@ -9,10 +9,10 @@
         <title>Lacuna Inc.</title>
     </head>
     <body>
-        <header class="row" id="header">
+        <header id="header">
             <div id="header-logo">
-                <img id="header-img" src="https://www.svgrepo.com/show/100814/brain.svg" alt="Computer drawing of a person's brain that highlights the area where memory is located">
-                <h1 id="header-name">LACUNA Inc.</h1>
+                <img id="header-logo-img" src="https://www.svgrepo.com/show/100814/brain.svg" alt="Computer drawing of a person's brain that highlights the area where memory is located">
+                <h1 id="header-logo-name">LACUNA Inc.</h1>
             </div>
             <nav id="nav-bar">
                 <ul>
@@ -29,15 +29,17 @@
             </nav>
         </header>
         <main>
-            <section class="row" id="banner">
-                <div>
-                    <iframe id="video" src="https://www.youtube.com/embed/UAlZ0SJzCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="banner">
+                <div class="row">
+                    <div>
+                        <iframe id="video" src="https://www.youtube.com/embed/UAlZ0SJzCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h4>
+                        Don't forget, with LACUNA, <br>
+                        <span style="font-style: italic;">you <span style="text-decoration: underline;">can</span> forget!</span>
+                    </h4>
                 </div>
-                <h4>
-                    Don't forget, with LACUNA, <br>
-                    <span style="font-style: italic;">you <span style="text-decoration: underline;">can</span> forget!</span>
-                </h4>
-            </section>
+            </div>
             <section id="about">       
                 <h2>About Us</h2>
                 <div class="row">
@@ -74,18 +76,18 @@
             </section>
             <section id="contact">
                 <h2>Contact</h2>
-                <div>
-                    <aside id="mailing-list" class="row">
+                <div class="row">
+                    <aside id="mailing-list">
                         Join our mailing list to learn first about product updates and seasonal deals!
                         <form id="form" action="https://www.freecodecamp.com/email-submit">
                             <input id="email" type="email"  name="email" placeholder="Your email address">
                             <input id="submit" type="submit">
                         </form>
                     </aside>
-                    <div class="col" id="contact-methods">
-                        <div>
-                            <p><strong>Phone:</strong>212-555-0865</p>
-                            <p><strong>Email:</strong>contact@lacunainc.com</p>
+                    <div id="contact-methods">
+                        <div class="col">
+                            <p><strong>Phone: </strong>212-555-0865</p>
+                            <p><strong>Email: </strong>contact@lacunainc.com</p>
                         </div>
                         <address class="col"> 
                             Lacuna Inc.<br>
