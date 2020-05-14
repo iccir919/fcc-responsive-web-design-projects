@@ -120,23 +120,25 @@ main {
   text-align: center;
   color: white;
   margin-bottom: 0;
+  font-size: 1.25em;
   line-height: 1.5;
+  text-shadow: 2px 2px 1px #222;
 }
 
 #step-one {
-  background: #4cd6cb;
+  background: linear-gradient(#4cd6cb, #78e9df);
 }
 
 #step-two {
-  background: #78e9df;
+  background: linear-gradient(#78e9df, #a6ece7);
 }
 
 #step-three {
-  background: #a6ece7;
+  background: linear-gradient(#a6ece7, #c2e9e6);
 }
 
 #step-four {
-  background: #c2e9e6;
+  background: linear-gradient(#c2e9e6, #dff3f1);
 }
 
 #mailing-list {
@@ -232,8 +234,6 @@ footer {
 
   #process .row {
     align-items: stretch;
-    flex-wrap: wrap;
-    flex-direction: row;
   }
 
   #process .col {
@@ -293,6 +293,22 @@ footer {
 
   #process .col {
     flex: 1 25%;
+  }
+
+  #step-one {
+    background: linear-gradient(to right, #4cd6cb, #78e9df);
+  }
+  
+  #step-two {
+    background: linear-gradient(to right, #78e9df, #a6ece7);
+  }
+  
+  #step-three {
+    background: linear-gradient(to right, #a6ece7, #c2e9e6);
+  }
+  
+  #step-four {
+    background: linear-gradient(to right, #c2e9e6, #dff3f1);
   }
 
   #mailing-list {
