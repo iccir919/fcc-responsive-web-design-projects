@@ -69,10 +69,15 @@ button {
 }
 
 fieldset {
-    margin-bottom: 30px;
     border: none;
+
 }
 
+.section-fieldset {
+    margin-bottom: 30px;
+}
+
+.section-fieldset 
 legend {
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -91,7 +96,14 @@ legend {
     border-radius: 100%;
 }
 
-label {
+fieldset {
+    margin-top: 15px;
+    padding: 0;
+}
+
+label,
+.radio-fieldset legend {
+    font-size: 1em;
     display: block;
     margin-bottom: 8px;
     margin-top: 15px;

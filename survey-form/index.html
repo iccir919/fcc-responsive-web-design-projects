@@ -16,7 +16,7 @@
             <main>
                 <p id="description">Please take this survey to describe to your bicycle habits and behaviors.</p>
                 <form id="survey-form">
-                    <fieldset>
+                    <fieldset class="section-fieldset">
                         <legend><span class="number">1</span> Your basic info</legend>
                         <label class="light" id="name-label" for="name">Name:</label>
                         <input type="text" id="name" name="user_name" placeholder="Joe or Jane S." required>
@@ -27,7 +27,7 @@
                         <label class="light" id="number-label" for="number">Age:</label>
                         <input type="number" id="number" name="user_age" min="18" max="115" placeholder="35" required>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="section-fieldset">
                         <legend><span class="number">2</span> Your biking behavior</legend>
                         
                         <label for="dropdown">How often do you bicycle?</label>
@@ -56,15 +56,17 @@
                             <input type="checkbox" id="transit" value="transit_reason" name="user_reason">
                             <label class="light" for="transit">To get to public transit</label>
 
-                        <label>What is the average distance of your rides [one way]?</label>
-                            <input type="radio" id="under_2_miles" value="under_2_miles" name="average_distance">
-                            <label class="light" for="under_2_miles">Under 2 miles</label> <br>
-                            <input type="radio" id="3_to_5_miles" value="3_to_5_miles" name="average_distance">
-                            <label class="light" for="3_to_5_miles">3 - 5 miles</label> <br>
-                            <input type="radio" id="6_to_10_miles" value="6_to_10_miles" name="average_distance">
-                            <label class="light" for="6_to_10_miles">6 - 10 miles</label> <br>
-                            <input type="radio" id="over_10" value="over_10" name="average_distance">
-                            <label class="light" for="over_10">Over 10 miles</label>
+                            <fieldset class="radio-fieldset">
+                                <legend>What is the average distance of your rides [one way]?</legend>
+                                <input type="radio" id="under_2_miles" value="under_2_miles" name="average_distance">
+                                <label class="light" for="under_2_miles">Under 2 miles</label> <br>
+                                <input type="radio" id="3_to_5_miles" value="3_to_5_miles" name="average_distance">
+                                <label class="light" for="3_to_5_miles">3 - 5 miles</label> <br>
+                                <input type="radio" id="6_to_10_miles" value="6_to_10_miles" name="average_distance">
+                                <label class="light" for="6_to_10_miles">6 - 10 miles</label> <br>
+                                <input type="radio" id="over_10" value="over_10" name="average_distance">
+                                <label class="light" for="over_10">Over 10 miles</label>
+                            </fieldset>
                         
                         <label>What prevents you from biking more?</label>
                         <textarea id="improvements" name="biking_improvements"></textarea>
