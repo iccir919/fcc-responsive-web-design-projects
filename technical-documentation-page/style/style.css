@@ -10,8 +10,8 @@
     --navbar-top-border: 1px solid rgb(177, 177, 177);
     --navbar-link-color: rgb(95, 95, 95);
     --navbar-link-background-hover: rgb(221, 220, 220);
-    --codespan-color: crimson;
-    --codespan-bg-color: #f1f1f1; 
+    --codespan-color: rgb(197, 0, 39);
+    --codespan-bg-color: #e6e6e6; 
 }
 
 [data-theme="dark"] {
