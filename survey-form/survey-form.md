@@ -1,15 +1,8 @@
-# Survey Form
+# Build a Survey Form
 
-## About The Project
+## Objective
+Build an app that is functionally similar to [https://survey-form.freecodecamp.rocks](https://survey-form.freecodecamp.rocks). **Do not copy this demo project.**
 
-This survey form is a project for the **Responsive Web Design** certification from [freeCodeCamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/).
-
-## Built With
-- HTML
-- CSS
-- JavaScript
-
-## [Live Version](https://iccir919.github.io/fcc-responsive-web-design-projects/survey-form/)
 
 ## User Stories
 
@@ -29,6 +22,4 @@ This survey form is a project for the **Responsive Web Design** certification fr
 - [x] Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
 - [x] Inside the form element, you are presented with a textarea for additional comments
 - [x] Inside the form element, you are presented with a button with id of submit to submit all the inputs
-
-## Acknowledgments
 

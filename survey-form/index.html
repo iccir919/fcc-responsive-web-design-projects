@@ -1,62 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Survey Form</title>
+    <meta name="author" content="Neil Ricci">
+    <meta name="description" content="This survey form is for the visitors of a personal website and
+      is a project for the Responsive Web Design certification by freeCodeCamp" />
+
+
     <link href="styles.css" rel="stylesheet">
   </head>
-  <body lang="en">
+  <body>
+    <header>
+      <h1 id="title">Tell Me About You!</h1>
+      <p id="description">This is a form for the visitors of my website to give some basic details about themselves.</p>
+    </header>
 
-    <h1 id="title">Tell Me About You!</h1>
-    <p id="description">This is a form for the visitors of my website to give some basic details about themselves.</p>
+    <form id="survey-form" method="post" action="">
 
-    <form id="survey-form">
-      <label id="name-label" for="name">Name </label><input id="name" type="text" placeholder="John Doe" required />
-      <label id="email-label" for="email">Email </label><input id="email" type="email" placeholder="john.doe@email.com" required />
-      <label id="number-label" for="number">Age </label><input id="number" type="number" min="13" max="110" placeholder="18" required />
-    
-      <fieldset>
-        <legend>Gender</legend>
-        <div>
-          <label for="male">
-            <input class="inline" type="radio" id="male" name="gender" value="male"> 
-            Male
-          </label>
-        </div>
-        <div>
-          <label for="female">
-            <input class="inline" type="radio" id="female" name="gender" value="female"> 
-            Female
-          </label>
-        </div>
-      </fieldset>
-    
-      <label for="dropdown">How did you come across my website? </label>
-      <select id="dropdown">
-        <option value="">--Choose option--</option>
-        <option value="search-engine">Search Engine</option>
-        <option value="social-media">Social Media</option>
-        <option value="direct-referral">Direct Referral</option>
-      </select>
-    
-      <label>Tell me your story</label>
-      <textarea id="survey-form" rows="5" cols="33">..whatever you feel comfortable sharing!</textarea>
-    
-      <fieldset>
-        <legend>Subscribe</legend>
-        <div>
-          <label> 
-            <input class="inline" type="checkbox" id="coding-blog" name="blog-subscriptions" value="coding-blog">
-            Sign me up for your coding blog
-          </label>
-        </div>
-        <div>
-          <label>
-            <input class="inline" type="checkbox" id="personal-blog" name="blog-subscriptions" value="personal-blog">
-            Sign me up for your personal blog
-          </label>
-        </div>
-      </fieldset>
+      <section>
+        <label id="name-label" for="name">Name </label><input id="name" type="text" placeholder="John Doe" required />
+        <label id="email-label" for="email">Email </label><input id="email" type="email" placeholder="john.doe@email.com" required />
+        <label id="number-label" for="number">Age </label><input id="number" type="number" min="13" max="110" placeholder="18" required />
+      
+        <fieldset>
+          <legend>Gender</legend>
+          <div class="gender-options">
+            <div>
+              <label for="male">
+                <input class="inline" type="radio" id="male" name="gender" value="male"> 
+                Male
+              </label>
+            </div>
+            <div>
+              <label for="female">
+                <input class="inline" type="radio" id="female" name="gender" value="female"> 
+                Female
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <section>
+        <label for="dropdown">How did you come across my website? </label>
+        <select id="dropdown">
+          <option value="">--Choose option--</option>
+          <option value="search-engine">Search Engine</option>
+          <option value="social-media">Social Media</option>
+          <option value="direct-referral">Direct Referral</option>
+        </select>
+      
+        <label>Tell me your story</label>
+        <textarea id="survey-form" rows="5" cols="33">..whatever you feel comfortable sharing!</textarea>
+      </section>
+
+      <section>
+        <fieldset>
+          <legend>Subscribe</legend>
+          <div>
+            <label> 
+              <input class="inline" type="checkbox" id="coding-blog" name="blog-subscriptions" value="coding-blog">
+              Sign me up for your coding blog
+            </label>
+          </div>
+          <div>
+            <label>
+              <input class="inline" type="checkbox" id="personal-blog" name="blog-subscriptions" value="personal-blog">
+              Sign me up for your personal blog
+            </label>
+          </div>
+        </fieldset>        
+      </section>
     
       <input type="submit" id="submit">
     </form>
