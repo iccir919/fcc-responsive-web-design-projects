@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+}
+
+
+main {
+    margin: 1em 0.5em;
+    padding: 0.5em;
+    background-color: rgb(236, 236, 236);
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+figure {
+    padding: 2em 1em;
+    background-color: white;
+}
+
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    margin-top: 1em;;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+h1,
+h2,
+h3,
+#img-caption {
+    text-align: center;
+}
+
+#subheading {
+    margin-top: 0.5em;
+    display: block;
+    font-size: 1.25rem;
+}
+
+#tribute-info,
+blockquote {
+    width: 75%;
+    max-width: 550px;
+    margin: 2em auto;
+}
+
+#tribute-info-heading {
+    margin-top: 3em;
+    font-size: 1.25em;
+}
+
+li {
+    margin-top: 1em;
+}
+
+.year {
+    font-weight: bold;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+.quote-citation {
+    display: block;
+    margin-top: 1rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
