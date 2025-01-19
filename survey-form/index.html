@@ -4,80 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Survey Form</title>
+    <title>freeCodeCamp Survey Form</title>
     <meta name="author" content="Neil Ricci">
-    <meta name="description" content="This survey form is for the visitors of a personal website and
-      is a project for the Responsive Web Design certification by freeCodeCamp" />
+    <meta name="description" content="This survey form is a project for the Responsive Web Design certification by freeCodeCamp" />
 
 
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1 id="title">Tell Me About You!</h1>
-      <p id="description">This is a form for the visitors of my website to give some basic details about themselves.</p>
-    </header>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
 
-    <form id="survey-form" method="post" action="">
+    <form id="survey-form">
+      <div class="info">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required>
+      </div>
 
-      <section>
-        <label id="name-label" for="name">Name </label><input id="name" type="text" placeholder="John Doe" required />
-        <label id="email-label" for="email">Email </label><input id="email" type="email" placeholder="john.doe@email.com" required />
-        <label id="number-label" for="number">Age </label><input id="number" type="number" min="13" max="110" placeholder="18" required />
-      
+      <div class="info">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="info">
+        <label for="age">Age (optional)</label>
+        <input 
+          type="number" 
+          id="number"
+          min="13"
+          max="120"
+          placeholder="Age"
+        >
+      </div>
+
+      <div class="info">
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select name="role" id="dropdown">
+          <option value="">Select current role</option>
+          <option value="student">Student</option>
+          <option value="full-time-job">Full Time Job</option>
+          <option value="full-time-learner">Full Time Learner</option>
+          <option value="prefer-not-to-say">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="info">
         <fieldset>
-          <legend>Gender</legend>
-          <div class="gender-options">
-            <div>
-              <label for="male">
-                <input class="inline" type="radio" id="male" name="gender" value="male"> 
-                Male
-              </label>
+          <legend>Would you recommend freeCodeCamp to a friend?</legend>
+          <div class="input-options-container">
+            <div class="option">
+              <input type="radio" id="definitely" name="recommend" value="definitely">
+              <label for="definitely">Definitely</label>
             </div>
-            <div>
-              <label for="female">
-                <input class="inline" type="radio" id="female" name="gender" value="female"> 
-                Female
-              </label>
+
+            <div class="option">
+              <input type="radio" id="maybe" name="recommend" value="maybe">
+              <label for="maybe">Maybe</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" id="unsure" name="recommend" value="unsure">
+              <label for="unsure">Not sure</label>
             </div>
           </div>
         </fieldset>
-      </section>
+      </div>
 
-      <section>
-        <label for="dropdown">How did you come across my website? </label>
-        <select id="dropdown">
-          <option value="">--Choose option--</option>
-          <option value="search-engine">Search Engine</option>
-          <option value="social-media">Social Media</option>
-          <option value="direct-referral">Direct Referral</option>
-        </select>
-      
-        <label>Tell me your story</label>
-        <textarea id="survey-form" rows="5" cols="33">..whatever you feel comfortable sharing!</textarea>
-      </section>
+      <div class="info radio-input-container">
 
-      <section>
         <fieldset>
-          <legend>Subscribe</legend>
-          <div>
-            <label> 
-              <input class="inline" type="checkbox" id="coding-blog" name="blog-subscriptions" value="coding-blog">
-              Sign me up for your coding blog
-            </label>
-          </div>
-          <div>
-            <label>
-              <input class="inline" type="checkbox" id="personal-blog" name="blog-subscriptions" value="personal-blog">
-              Sign me up for your personal blog
-            </label>
-          </div>
-        </fieldset>        
-      </section>
-    
-      <input type="submit" id="submit">
-    </form>
+          <legend>What would you like to see improved? <span>(Check all that apply)</span></legend>
 
+          <div class="input-options-container">
+
+            <div class="option">
+              <input type="checkbox" id="front-end-projects" name="favorite-feature">
+              <label for="front-end-projects">Front-end projects</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="back-end-projects" name="favorite-feature">
+              <label for="back-end-projects">Back-end Projects</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="data-visualization" name="favorite-feature">
+              <label for="data-visualization">Data Visualization</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="challenges" name="favorite-feature">
+              <label for="challenges">Challenges</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="open-source-community" for="favorite-feature">
+              <label for="open-source-community">Open Source Community</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="gitter-help-rooms" for="favorite-feature">
+              <label for="gitter-help-rooms">Gitter help rooms</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="videos" for="favorite-feature">
+              <label for="videos">Videos</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="city-meetups" for="favorite-feature">
+              <label for="city-meetups">City Meetups</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="wiki" for="favorite-feature">
+              <label for="wiki">Wiki</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="forum" for="favorite-feature">
+              <label for="forum">Forum</label>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="additional-courses" for="favorite-feature">
+              <label for="additional-courses">Additional Courses</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="info">
+          <label>Any comments or suggestions?</label>
+          <textarea id="textarea" placeholder="Enter your comment here..."></textarea>
+        </div>
+
+      </fieldset>
+
+      <button id="submit">Submit</button>
+    </form>
   </body>
 </html>
 
