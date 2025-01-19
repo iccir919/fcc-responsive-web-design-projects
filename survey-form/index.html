@@ -17,17 +17,17 @@
 
     <form id="survey-form">
       <div class="info">
-          <label for="name">Name</label>
+          <label for="name" id="name-label">Name</label>
           <input type="text" name="name" id="name" placeholder="Enter your name" required>
       </div>
 
       <div class="info">
-        <label for="email">Email</label>
+        <label for="email" id="email-label">Email</label>
         <input type="email" name="email" id="email" placeholder="Enter your email" required>
       </div>
 
       <div class="info">
-        <label for="age">Age (optional)</label>
+        <label for="age" id="number-label">Age (optional)</label>
         <input 
           type="number" 
           id="number"
@@ -79,57 +79,57 @@
           <div class="input-options-container">
 
             <div class="option">
-              <input type="checkbox" id="front-end-projects" name="favorite-feature">
+              <input type="checkbox" id="front-end-projects" value="front-end-projects" name="favorite-feature">
               <label for="front-end-projects">Front-end projects</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="back-end-projects" name="favorite-feature">
+              <input type="checkbox" id="back-end-projects" value="back-end-projects" name="favorite-feature">
               <label for="back-end-projects">Back-end Projects</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="data-visualization" name="favorite-feature">
+              <input type="checkbox" id="data-visualization" value="data-visualization" name="favorite-feature">
               <label for="data-visualization">Data Visualization</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="challenges" name="favorite-feature">
+              <input type="checkbox" id="challenges" value="challenges" name="favorite-feature">
               <label for="challenges">Challenges</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="open-source-community" for="favorite-feature">
+              <input type="checkbox" id="open-source-community" value="open-source-community" for="favorite-feature">
               <label for="open-source-community">Open Source Community</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="gitter-help-rooms" for="favorite-feature">
+              <input type="checkbox" id="gitter-help-rooms" value="gitter-help-rooms" for="favorite-feature">
               <label for="gitter-help-rooms">Gitter help rooms</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="videos" for="favorite-feature">
+              <input type="checkbox" id="videos" value="videos" for="favorite-feature">
               <label for="videos">Videos</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="city-meetups" for="favorite-feature">
+              <input type="checkbox" id="city-meetups" value="city-meetups" for="favorite-feature">
               <label for="city-meetups">City Meetups</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="wiki" for="favorite-feature">
+              <input type="checkbox" id="wiki" value="wiki" for="favorite-feature">
               <label for="wiki">Wiki</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="forum" for="favorite-feature">
+              <input type="checkbox" id="forum" value="forum" for="favorite-feature">
               <label for="forum">Forum</label>
             </div>
 
             <div class="option">
-              <input type="checkbox" id="additional-courses" for="favorite-feature">
+              <input type="checkbox" id="additional-courses" value="additional-courses" for="favorite-feature">
               <label for="additional-courses">Additional Courses</label>
             </div>
           </div>
