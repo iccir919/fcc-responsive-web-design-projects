@@ -1,0 +1,110 @@
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    padding-top: 1.5em;
+}
+
+
+#navbar ul {
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link-container {
+    margin: 1em auto;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#welcome-section {
+    height: 95vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+#welcome-section h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.welcome-heading-subtitle {
+    display: block;
+    font-size: 2rem;
+}
+
+#projects {
+    background-color: lightgray;
+}
+
+.project-item {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    width: 100%;
+}
+
+.project-title {
+    background-color: black;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.project-link {
+    font-size: 1em;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.socials-list {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-link {
+    color: black;
+    font-size: 1.25rem;
+    display: inline-block;
+    margin: 1em;
+    text-decoration: none;
+}
+
+footer {
+    padding: 2em 1em;
+    background-color: black;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
