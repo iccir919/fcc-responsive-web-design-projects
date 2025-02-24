@@ -60,8 +60,13 @@ body {
     background-color: lightgray;
 }
 
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .project-item {
-    margin: 2rem 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -91,7 +96,7 @@ body {
     align-items: center;
 }
 
-.social-link {
+.profile-link {
     color: black;
     font-size: 1.25rem;
     display: inline-block;
@@ -107,4 +112,32 @@ footer {
 
 footer p {
     color: white;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .projects-container {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .project-tile {
+        width: 40%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
