@@ -58,6 +58,7 @@ body {
 
 #projects {
     background-color: lightgray;
+    padding-bottom: 3em;
 }
 
 .projects-container {
@@ -66,18 +67,18 @@ body {
     gap: 1em;
 }
 
-.project-item {
-    display: flex;
-    flex-direction: column;
+.project-tile {
+    flex: 0 0 500px;
 }
 
 .project-img {
     width: 100%;
+    vertical-align: middle;
 }
 
 .project-title {
     background-color: black;
-    padding: 1em 2em;
+    padding: 1em;
     text-align: center;
 }
 
@@ -86,6 +87,11 @@ body {
     display: inline-block;
     color: white;
     text-decoration: none;
+}
+
+#contact {
+    padding-top: 1em;
+    padding-bottom: 3em;
 }
 
 .socials-list {
@@ -105,12 +111,12 @@ body {
 }
 
 footer {
-    padding: 2em 1em;
+    padding: 3em 1em;
     background-color: black;
     text-align: center;
 }
 
-footer p {
+footer small {
     color: white;
 }
 
@@ -121,11 +127,6 @@ footer p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
     .projects-container {
         flex-flow: row wrap;
         justify-content: space-around;
@@ -135,6 +136,15 @@ footer p {
     .project-tile {
         width: 40%;
     }
+
+    .socials-list {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
