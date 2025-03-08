@@ -7,6 +7,10 @@
         <script src="https://kit.fontawesome.com/c046fb424d.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styles.css">
         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
         <title>Neil Ricci - Personal Portfolio</title>
     </head>
     <body>
@@ -20,7 +24,13 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-link-container">
-                    <a href="/blog" class="nav-link">Blog</a>
+                    <a 
+                        href="https://ephemeral-granita-4350c2.netlify.app/learning-journal/"
+                        target="_blank" 
+                        class="nav-link"
+                    >
+                        Blog
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -37,67 +47,81 @@
                 <div class="projects-container">
     
                     <div class="project-tile">
-                        <figure>
-                            <img class="project-img" src="images/restaurant-ordering-app.png" alt="Restaurant Ordering App screenshot" loading="lazy">
-                            <figcaption class="project-title">
-                                <a 
-                                    href="https://wondrous-entremet-a82883.netlify.app/"
-                                    class="project-link" 
-                                    target="_blank"
-                                >
-                                    Restaurant Ordering App
-                                </a>
-                            </figcaption>
-                        </figure>
+                        <a 
+                        href="https://wondrous-entremet-a82883.netlify.app/"
+                        class="project-link" 
+                        target="_blank"
+                        >
+                            <figure>
+                                <img class="project-img" src="images/restaurant-ordering-app.png" alt="Restaurant Ordering App screenshot" loading="lazy">
+                                <figcaption class="project-title">
+                                        Restaurant Ordering App
+                                </figcaption>
+                            </figure>
+                        </a>
                     </div>
     
     
                     <div class="project-tile">
-                        <figure>
-                            <img class="project-img" src="images/twimba.png" alt="Twimba screenshot" loading="lazy">
-                            <figcaption class="project-title">
-                                <a 
-                                    href="https://timely-dolphin-9e1649.netlify.app/"
-                                    class="project-link" 
-                                    target="_blank"
-                                >
-                                    Twimba
-                                </a>
-                            </figcaption>
-                        </figure>
+                        <a 
+                        href="https://timely-dolphin-9e1649.netlify.app/"
+                        class="project-link" 
+                        target="_blank"
+                        >
+                            <figure>
+                                <img class="project-img" src="images/twimba.png" alt="Twimba screenshot" loading="lazy">
+                                <figcaption class="project-title">
+                                        Twimba
+                                </figcaption>
+                            </figure>
+                        </a>
                     </div>
     
                     <div class="project-tile">
-                        <figure>
-                            <img class="project-img" src="images/oldagram.png" alt="Oldagram screenshot" loading="lazy">
-                            <figcaption class="project-title">
-                                <a 
-                                    href="https://velvety-seahorse-07c1ee.netlify.app/"
-                                    class="project-link" 
-                                    target="_blank"
-                                >
-                                    Oldagram
-                                </a>
-                            </figcaption>
-                        </figure>
+                        <a 
+                        href="https://velvety-seahorse-07c1ee.netlify.app/"
+                        class="project-link" 
+                        target="_blank"
+                        >
+                            <figure>
+                                <img class="project-img" src="images/oldagram.png" alt="Oldagram screenshot" loading="lazy">
+                                <figcaption class="project-title">
+                                        Oldagram
+                                </figcaption>
+                            </figure>
+                        </a>
                     </div>
     
                     <div class="project-tile">
-                        <figure>
-                            <img class="project-img" src="images/survey-form.png" alt="Survey Form screenshot" loading="lazy">
-                            <figcaption class="project-title">
-                                <a 
-                                    href="https://iccir919.github.io/fcc-responsive-web-design-projects/survey-form/"
-                                    class="project-link" 
-                                    target="_blank"
-                                >
-                                    Survey Form
-                                </a>
-                            </figcaption>
-                        </figure>
+                        <a 
+                        href="https://iccir919.github.io/fcc-responsive-web-design-projects/survey-form/"
+                        class="project-link" 
+                        target="_blank"
+                        >
+                            <figure>
+                                <img class="project-img" src="images/survey-form.png" alt="Survey Form screenshot" loading="lazy">
+                                <figcaption class="project-title">
+                                        Survey Form
+                                </figcaption>
+                            </figure>
+                        </a>
                     </div>
-    
-    
+
+                    <div class="project-tile">
+                        <a 
+                        href="https://incandescent-maamoul-2ad4ff.netlify.app/tribute-page/"
+                        class="project-link" 
+                        target="_blank"
+                        >
+                            <figure>
+                                <img class="project-img" src="images/tribute-page.png" alt="Tribute Page screenshot" loading="lazy">
+                                <figcaption class="project-title">
+                                        Tribute Page
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
                 </div>
             </section>
     
@@ -110,7 +134,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="profile-link" href="https://github.com/iccir919" target="_blank">
+                        <a id="profile-link" class="profile-link" href="https://github.com/iccir919" target="_blank">
                             <i class="fa-brands fa-github" aria-hidden="true"></i> Github
                         </a>
                     </li>
